@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Manrope  } from "next/font/google";
 import "./globals.css";
 
-const open_sans = Open_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
 });
 
 
 export const metadata: Metadata = {
   title: "Michael's Portfolio",
-  description: "My new Portfolio",
+  description: "A modern portfolio",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={open_sans.className}>
+        className={manrope.className}>
         {children}
       </body>
     </html>
