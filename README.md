@@ -1,5 +1,5 @@
 Tutorial
-https://youtu.be/CHGHuF24Cjw?si=moFmpH6wKk4jtnvT&t=947
+https://youtu.be/CHGHuF24Cjw?si=eeKxcj3b8Tvpf4aa&t=2672
 
 Clone the starter repo from https://github.com/safak/animated-portfolio
 
