@@ -1,4 +1,5 @@
 import "./navbar.scss"
+import {motion} from "framer-motion"
 
 import MyImage from '../../assets/img/mike.jpeg'
 import facebook from '../../assets/img/facebook.svg'
@@ -12,7 +13,13 @@ export const Navbar = () => {
   return (
     <div className="navbar">
         <div className="wrapper">
-            <span>Mike Dev</span>
+            <motion.span
+                initial={{ opacity:0,scale:0.5}}
+                animate={{opacity:1, scale:1}}
+                transition={{duration: 0.5}} >
+                        Mike Dev
+            </motion.span>
+           
             <div className="social">
                 <a href="#"><img src={facebook} alt="facebook" /></a>
                

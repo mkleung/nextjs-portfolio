@@ -1,5 +1,5 @@
 Tutorial
-https://youtu.be/CHGHuF24Cjw?si=tNr1E2mpyRgoy9wp&t=792
+https://youtu.be/CHGHuF24Cjw?si=moFmpH6wKk4jtnvT&t=947
 
 Clone the starter repo from https://github.com/safak/animated-portfolio
 
@@ -10,6 +10,7 @@ Clone the starter repo from https://github.com/safak/animated-portfolio
 Dependencies
 
 ```npm i sass@1.68.0```
+``` npm i framer-motion@10.16.4 ```
 
 
 Visual Studio Plugins
