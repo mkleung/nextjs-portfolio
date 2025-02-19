@@ -14,9 +14,8 @@
 
 
 html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-
+    // scroll-snap-type: y mandatory;
+    // scroll-behavior: smooth;
 }
 
 * {
@@ -32,11 +31,13 @@ a {
 }
 
 body {
+    overflow-y: scroll;
     background-color: #0c0c1d;
     color: lightgray; 
 }
 
 section {
     height: 100vh;
-    scroll-snap-align: center;
+    // scroll-snap-align: center;
+    // scroll-snap-align: start;
 }
