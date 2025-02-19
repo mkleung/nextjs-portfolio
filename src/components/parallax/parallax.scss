@@ -7,15 +7,23 @@
     justify-content: center;
     z-index: -99;
     overflow: hidden;
+    background-color: linear-gradient(180deg, #111132, #0c0c1d);
 
-    h1 {
-        font-size: 100px;
+    .logo {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
     }
+
+    .main-wrapper {
+        text-align: center;
+    }
+
 
     .mountains {
         background-image: url("/mountains.png");
         background-size: cover;
-        background-position: bottom;
+        background-position: 20%;
         width: 100%;
         height:100%;
         position: absolute;

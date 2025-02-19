@@ -1,7 +1,6 @@
 import "./parallax.scss"
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion"
-import mylogo from '../../assets/img/mike.webp'
 
 const Parallax = ({type}) => {
 
@@ -17,18 +16,14 @@ const Parallax = ({type}) => {
 
 
   return (
-    <div className="parallax">
-
-      <div className="main-wrapper">
-        <img className="logo" src={mylogo} alt="mike" />
-        <motion.h2>I'm Michael and</motion.h2>
-        <motion.h1>I craft visually appealing websites</motion.h1>
-        <motion.button>Let's Connect</motion.button>
-      </div>
+    <div 
+        className="parallax" 
+        style={{background:type==="services" ? 
+            "linear-gradient(180deg, #111132, #0c0c1d)" 
+            : "linear-gradient(180deg, #111132, #505064)"}}>
 
 
-
-
+        <motion.h1 style={{y:yText}}>{type==="services" ? "What I do?": "What I did"}</motion.h1>
         <motion.div className="mountains"></motion.div>
         <motion.div  style={{y:yBg}} className="planets"></motion.div>
         <motion.div  style={{x:yBg}}  className="stars"></motion.div>

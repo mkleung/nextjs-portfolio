@@ -11,15 +11,12 @@ const App = () => {
   return <div>
     <section id="Home">
       <Navbar/>
-      <Hero />
+      {/* <Hero /> */}
+
+      <section><Parallax type="services"/></section>
     </section>
-    <section><Parallax type="services"/></section>
-    <section id="Services"></section>
-    <Services/>
-    <section id="Portfolio"></section>
-    <Portfolio />
-    <section id="Contact"></section>
-    <section><Contact/></section>
+    
+
   </div>;
 };
 
