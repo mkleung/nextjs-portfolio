@@ -7,6 +7,7 @@
     // background: linear-gradient(180deg, #34495e, #2c3e50);
     background-color: black;
     position: relative;
+    overflow: hidden;
 
     .wrapper {
         max-width: 768px;
@@ -69,8 +70,10 @@
         white-space: nowrap;
         // color: #ffffff09;
         color: white;
-        opacity: 40%;
+        opacity: 20%;
         z-index: -99;
+        width: 50%;
+        font-weight: bold;
     }
 
 }
