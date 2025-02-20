@@ -1,72 +1,37 @@
 import "./hero.scss"
-import { motion } from "framer-motion"
-import mylogo from '../../assets/img/mike.jpeg'
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion"
+import mylogo from '../../assets/img/mike.webp'
 
-const textVariants = {
-    initial: {
-        x: -500,
-        opacity: 0,
-    },
-    animate: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            duration: 1,
-            staggerChildren: 0.1,
-        },
-    },
-    scrollButton: {
-        opacity: 0,
-        y: 10,
-        transition: {
-            duration: 2,
-            repeat: Infinity,
-        }
-    }
-}
+const Hero = ({type}) => {
+
+    const ref = useRef();
+
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]
+    });
+
+    const yText = useTransform(scrollYProgress, [0,1], ["0%","500%"]);
+    const yBg = useTransform(scrollYProgress, [0,1], ["0%","100%"]);
 
 
-const sliderVariants = {
-    initial: {
-        x: 0,
-    },
-    animate: {
-        x: '100%',
-        transition: {
-            repeat: Infinity,
-            duration: 20,
-            repeatType:"mirror",
-        },
-    },
-}
-
-const Hero = () => {
   return (
     <div className="hero">
-        <div className="wrapper">
-            <motion.div 
-            className="textContainer" 
-            variants={textVariants} 
-            initial='initial'
-            animate="animate">
-                <motion.h2 variants={textVariants}></motion.h2>
-                <motion.h2 variants={textVariants}>Hello there! I'm Michael Leung and I build beautiful websites</motion.h2>
-                <motion.div variants={textVariants} className="buttons">
-                    <motion.button variants={textVariants}>See my work</motion.button>
-                    <motion.button variants={textVariants}>Contact Me</motion.button>
-                </motion.div>
-                <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
-            </motion.div>
-        </div>
 
-        <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-            Design Code Ship
-        </motion.div>
+      <div className="main-wrapper">
+        <img className="logo" src={mylogo} alt="mike" />
+        <motion.h2>I'm Michael and</motion.h2>
+        <motion.h1>I craft visually appealing websites</motion.h1>
+        <motion.button>Let's Connect</motion.button>
+      </div>
 
-        <div className="imageContainer">
-            <img src={mylogo} alt="mike" />
-        </div>
-        
+
+
+
+        <motion.div className="mountains"></motion.div>
+        <motion.div  style={{y:yBg}} className="planets"></motion.div>
+        <motion.div  style={{x:yBg}}  className="stars"></motion.div>
     </div>
   )
 }
