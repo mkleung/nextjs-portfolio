@@ -1,4 +1,4 @@
-https://www.youtube.com/watch?v=ELssXP1sTC8
+https://youtu.be/ELssXP1sTC8?si=vurvYlJU5V25R_t_&t=7399
 
 
 ## Getting Started
@@ -19,3 +19,6 @@ https://polypane.app/
 
 - Prettier Shortcut
 Shift + Alt + F
+
+- Word wrap classes (when classes get too long in tailwind)
+alt + z
