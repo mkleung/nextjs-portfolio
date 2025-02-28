@@ -101,17 +101,20 @@ export const AboutSection = () => {
                 className=""
               />
 
-              <ToolboxItems items={toolboxItems} className="mt-6" />
               <ToolboxItems
                 items={toolboxItems}
                 className=""
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+              />
+              <ToolboxItems
+                items={toolboxItems}
+                className="mt-5"
+                itemsWrapperClassName="animate-move-right [animation-duration:30s]"
               />
             </Card>
           </div>
 
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3" >
-
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
             {/* hobbies */}
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader

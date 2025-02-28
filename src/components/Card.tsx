@@ -1,17 +1,20 @@
-import React from "react";
+import { PRERENDER_REVALIDATE_ONLY_GENERATED_HEADER } from "next/dist/lib/constants";
+import React, { ComponentPropsWithoutRef } from "react";
 import { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const Card = ({
   className,
   children,
-}: PropsWithChildren<{ className?: string }>) => {
+  ...other
+}: ComponentPropsWithoutRef<"div">) => {
   return (
     <div
       className={twMerge(
         "bg-gray-700 rounded-3xl relative z-0 overflow-hidden after:z-10  after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none",
         className
       )}
+      {...other}
     >
       {children}
     </div>

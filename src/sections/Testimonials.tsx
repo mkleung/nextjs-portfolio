@@ -38,7 +38,7 @@ export const TestimonialsSection = () => {
           description="test"
         />
 
-        <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)]">
+        <div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image: linear-gradient(to_right, transparent, black_10%, black_90%, transparent)]">
           <div className="flex flex-none gap-8 ">
             {testimonials.map((testimonial) => (
               <Card
@@ -56,13 +56,14 @@ export const TestimonialsSection = () => {
 
                   <div>
                     <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-white/40">{testimonial.position}</div>
+                    <div className="text-sm text-white/40">
+                      {testimonial.position}
+                    </div>
                   </div>
-                  </div>
-                  <p className="mt-4 md:mt-6 text-sm md:text-base">
-                    {testimonial.text}
-                  </p>
-                
+                </div>
+                <p className="mt-4 md:mt-6 text-sm md:text-base">
+                  {testimonial.text}
+                </p>
               </Card>
             ))}
           </div>
