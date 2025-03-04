@@ -85,19 +85,24 @@ const hobbies = [
     emoji: "📷",
     link: "",
   },
-
   {
-    title: "Mountain Biking",
+    title: "Language Learning",
+    emoji: "🌍",
+    link: "",
+  },
+  {
+    title: "Biking",
     emoji: "🚵‍♂️",
     link: "",
   },
+
 ];
 
 export const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="py-20 lg:py-28">
+    <section id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader eyebrow="About Me" title="" description="" />
 
@@ -197,6 +202,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

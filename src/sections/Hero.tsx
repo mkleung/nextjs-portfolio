@@ -5,7 +5,7 @@ import logo from "@/assets/images/mike.jpeg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32">
+    <section id="home" className="py-32">
       <div className="container">
         <div className="flex flex-col items-center">
           <Image
@@ -42,6 +42,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
