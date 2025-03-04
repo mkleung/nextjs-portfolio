@@ -20,6 +20,7 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import StarIcon from "@/assets/icons/star.svg";
 
 const toolboxItems = [
   {
@@ -58,34 +59,43 @@ const toolboxItems2 = [
     iconType: PythonIcon,
   },
   {
-    title: "Node/Next Js",
+    title: "Next Js",
     iconType: NodeIcon,
   },
 ];
 
 const hobbies = [
   {
-    title: "Painting 🎨",
+    title: "Painting",
+    emoji: "🎨",
+    link: "",
   },
   {
-    title: "Pizza Making 🍕",
+    title: "Pizza Making",
+    emoji: "🍕",
+    link: "",
   },
   {
-    title: "Bollywood Movies 🎦",
+    title: "Bollywood Movies",
+    emoji: "📺",
+    link: "",
   },
   {
-    title: "Scary Podcasts 😱",
+    title: "Photography",
+    emoji: "📷",
+    link: "",
   },
+
   {
-    title: "Bird Photography 📷",
-  },
-  {
-    title: "Biking 🚵‍♂️",
+    title: "Mountain Biking",
+    emoji: "🚵‍♂️",
+    link: "",
   },
 ];
 
 export const AboutSection = () => {
   const constraintRef = useRef(null);
+
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -112,26 +122,35 @@ export const AboutSection = () => {
 
             {/* About */}
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
-              <CardHeader title="About Me" description="" className="" />
+              <CardHeader title="About Me" className="" />
 
-              <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-5">
+              <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
                 <p>
-                I specialize in backend development using PHP, Laravel, and WordPress, 
-                along with frontend UI frameworks like React. 
+                  Hello! I'm a dedicated front-end developer with a passion for
+                  delivering user-friendly websites that captivates audiences. I
+                  also love to help the local community with technology
+                  solutions that enhance people's lives.
                 </p>
 
-                <p>Hobbies</p>
+                <div className="inline-flex items-center gap-2">
+                  <StarIcon className="size-8 text-emerald-300"></StarIcon>
+                  <h3 className="font-serif text-xl gradient-underline">
+                    Hobbies
+                  </h3>
+                </div>
 
-                <div>
+                <div className="h-[90px] mt-1" ref={constraintRef}>
                   {hobbies.map((hobby) => (
-                    <div
+                    <motion.div
                       key={hobby.title}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1 mb-2 mr-2"
+                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1 mb-2 mr-2 hover:cursor-pointer"
+                      drag
+                      dragConstraints={constraintRef}
                     >
-                      <span className="font-medium text-gray-950">
-                        {hobby.title}
+                      <span className="font-small text-gray-950">
+                        {hobby.title} {hobby.emoji}
                       </span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -141,7 +160,20 @@ export const AboutSection = () => {
           <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
             {/* Skills */}
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
-              <CardHeader title="My Skills" description="" className="" />
+              <CardHeader title="Education" className="" />
+              <div className="flex flex-col p-6 md:px-10 md:pt-0 gap-5">
+                <p>
+                  Bachelor of Computer Science, Carleton University, Ottawa,
+                  Canada
+                </p>
+
+                <div className="inline-flex items-center gap-2">
+                  <StarIcon className="size-8 text-emerald-300"></StarIcon>
+                  <h3 className="font-serif text-xl gradient-underline">
+                    Skills
+                  </h3>
+                </div>
+              </div>
 
               <ToolboxItems
                 items={toolboxItems}
@@ -157,7 +189,7 @@ export const AboutSection = () => {
 
             {/* Book */}
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-              <CardHeader title="Reading" description="" />
+              <CardHeader title="Reading" />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="book cover"></Image>
               </div>

@@ -14,3 +14,19 @@
         @apply lg:max-w-5xl;
     }
 }
+
+
+/* Custom Styles */
+.gradient-underline {
+    position: relative;
+  }
+  .gradient-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px; /* Adjust height as needed */
+    width: 100%;
+    background: linear-gradient(to right, #34d399, #0ea5e9); /* from-emerald-300 to-sky-400 */
+    border-radius: 2px; /* Rounded corners */
+  }
