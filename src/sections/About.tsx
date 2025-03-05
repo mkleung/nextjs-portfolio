@@ -101,10 +101,8 @@ export const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
-    <section id="about" className="py-20 lg:py-28">
+    <section id="about" className="py-20 lg:py-10">
       <div className="container">
-        <SectionHeader eyebrow="About Me" title="" description="" />
-
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             {/* map */}
@@ -112,7 +110,7 @@ export const AboutSection = () => {
               <Image
                 src={mapImage}
                 alt="map"
-                className="h-full w-full object-cover object-left-top"
+                className="h-full w-full object-cover object-left-top "
               ></Image>
 
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full ">
@@ -129,7 +127,7 @@ export const AboutSection = () => {
               <CardHeader title="About Me" className="" />
 
               <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
-                <p>
+                <p className="text-white/85 ">
                   Hello! I'm a dedicated front-end developer with a passion for
                   delivering user-friendly websites that captivates audiences. I
                   also love to help the local community with technology
@@ -147,15 +145,13 @@ export const AboutSection = () => {
                   {hobbies.map((hobby) => (
                     <motion.div
                       key={hobby.title}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1 mb-2 mr-2 hover:cursor-pointer"
+                      className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 me-2 mb-2 hover:cursor-pointer"
                       drag
                       dragConstraints={constraintRef}
-                      whileHover={{ scale: 0.95 }}
-                      transition={{
-                        type: "ease",
-                      }}
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
                     >
-                      <span className="font-small text-gray-950">
+                      <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-700 dark:bg-gray-700 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black ">
                         {hobby.title} {hobby.emoji}
                       </span>
                     </motion.div>
@@ -170,11 +166,11 @@ export const AboutSection = () => {
             <Card className="h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader title="Education" className="" />
               <div className="flex flex-col p-6 md:px-10 md:pt-0 gap-5">
-                <ul className="list-disc pl-5">
+                <ul className="list-disc pl-5 text-white/85 ">
                   <li>
                     Data Science Graduate Certificate, Toronto Metropolitan U.
                   </li>
-                  <li>
+                  <li >
                     Bachelor of Computer Science, Carleton University, Ottawa
                   </li>
                 </ul>
@@ -204,8 +200,6 @@ export const AboutSection = () => {
               <CardHeader title="Reading" />
               <motion.div
                 className="w-40 mx-auto mt-2 md:mt-0"
-                whileHover={{ scale: 0.95 }}
-                transition={{ type: "ease"}}
                 style={{ overflow: "hidden" }}
               >
                 <Image src={bookImage} alt="book cover"></Image>

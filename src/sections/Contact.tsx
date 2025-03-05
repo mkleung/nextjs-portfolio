@@ -1,6 +1,15 @@
+"use client";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Modal from "@/components/Modal";
 
 export const ContactSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
@@ -17,10 +26,19 @@ export const ContactSection = () => {
             </div>
 
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border-gray-900">
+              <motion.button
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-full gap-2 w-max border-gray-900"
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={openModal}
+              >
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4" />
-              </button>
+              </motion.button>
+
+              <Modal isOpen={isModalOpen} onClose={closeModal} title="My Modal">
+                <p>This is the modal content!</p>
+              </Modal>
             </div>
           </div>
         </div>
