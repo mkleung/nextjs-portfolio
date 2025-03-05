@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import {  Poppins, Work_Sans } from 'next/font/google';
+import {  Poppins, Work_Sans, Bad_Script} from 'next/font/google';
 import './globals.css';
 import { twMerge } from 'tailwind-merge'
 
@@ -13,6 +13,7 @@ const work_sans = Work_Sans({
   variable: '--font-serif',
   weight: '700',
 });
+
 
 
 

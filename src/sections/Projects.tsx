@@ -18,9 +18,9 @@ const portfolioProjects = [
     title: "Kanata Seniors Council",
     results: [
      
-      { title: "Developed a modern and user-friendly website design that is fully responsive" },
-      { title: "Improved site speed by 50% and successfully passed accessibility audit" },
-      
+      { title: "Developed a modern and user-friendly WordPress site that is fully responsive" },
+      { title: "Improved site speed by 50% and successfully passed an accessibility audit" },
+      { title: "Migrated the site from Elementor to Gutenberg Blocks and ACFs" },
     ],
     link: "https://kanataseniors.ca",
     image: kanata,

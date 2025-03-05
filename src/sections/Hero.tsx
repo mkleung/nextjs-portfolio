@@ -4,15 +4,25 @@ import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import logo from "@/assets/images/mike.jpeg";
+import ArrowRight from "@/assets/images/arrow-right.svg";
+import { Homemade_Apple } from "next/font/google";
+import { motion } from "framer-motion";
+
+const cursive_script = Homemade_Apple({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: "400",
+});
 
 export const HeroSection = () => {
-
   const scrollToSection = (id: string): void => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const subtitle = "Design Develop Deliver".split(" ");
 
   return (
     <section id="home" className="py-32">
@@ -26,37 +36,65 @@ export const HeroSection = () => {
 
           <div className="max-w-2xl mx-auto">
             <h1 className="font-serif text-3xl md:text-5xl text-center mt-8">
-              Hi I'm <span className="gradient-underline">Michael Leung</span>, Software Developer
+              Hi I'm <a href={window.location.href} className="gradient-underline">Michael Leung</a>,
+              Software Developer
             </h1>
 
-            <p className="mt-4 text-center text-white/60 md:text-lg">
+            <p className="mt-5 text-center text-white/80 md:text-lg">
               I specialize in transforming designs into functional,
               high-performing web applications. Let's discuss your next project.
             </p>
 
-            <p className="mt-4 text-center text-white/60 md:text-lg">
-              Design Develop Deliver
-            </p>
+            <div className="mt-5 text-center text-white/80 md:text-2xl flex justify-center items-center">
+              <p className={cursive_script.className}>
+                {subtitle.map((element, i) => (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: i / 10,
+                    }}
+                    key={i}
+                  >
+                    {element}{" "}
+                    {i != subtitle.length - 1 && (
+                      <span className="mx-2">
+                        <ArrowRight className="w-10 h-10 inline" />
+                      </span>
+                    )}
+                  </motion.span>
+                ))}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-center mt-5">
-            <a href="#projects" className="inline-flex items-center gap-2 border-white/10 px-6 h-12 rounded-xl"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('projects');
-            }}>
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 border-white/10 px-6 h-12 rounded-xl"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("projects");
+              }}
+            >
               <span className="font-semibold">Explore My Work</span>
               <ArrowDown className="w-4 h-4" />
             </a>
 
-            <a href="#contact" className="flex gap-1 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full px-5 py-1" 
-               onClick={(e) => {
-                 e.preventDefault();
-                 scrollToSection('contact');
-               }}>
+            <motion.a
+              href="#contact"
+              className="flex gap-1 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full px-5 py-1"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("contact");
+              }}
+              whileHover={{ scale: 0.95 }}
+              transition={{ type: "ease"}}
+            >
               <span>👋</span>
               <span className="text-black">Let's Connect</span>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

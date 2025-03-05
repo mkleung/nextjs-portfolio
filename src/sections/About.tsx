@@ -95,7 +95,6 @@ const hobbies = [
     emoji: "🚵‍♂️",
     link: "",
   },
-
 ];
 
 export const AboutSection = () => {
@@ -151,6 +150,10 @@ export const AboutSection = () => {
                       className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1 mb-2 mr-2 hover:cursor-pointer"
                       drag
                       dragConstraints={constraintRef}
+                      whileHover={{ scale: 0.95 }}
+                      transition={{
+                        type: "ease",
+                      }}
                     >
                       <span className="font-small text-gray-950">
                         {hobby.title} {hobby.emoji}
@@ -168,10 +171,14 @@ export const AboutSection = () => {
               <CardHeader title="Education" className="" />
               <div className="flex flex-col p-6 md:px-10 md:pt-0 gap-5">
                 <ul className="list-disc pl-5">
-                  <li>Data Science Graduate Certificate, Toronto Metropolitan U.</li>
-                  <li>Bachelor of Computer Science, Carleton University, Ottawa</li>
+                  <li>
+                    Data Science Graduate Certificate, Toronto Metropolitan U.
+                  </li>
+                  <li>
+                    Bachelor of Computer Science, Carleton University, Ottawa
+                  </li>
                 </ul>
-        
+
                 <div className="inline-flex items-center gap-2">
                   <StarIcon className="size-8 text-emerald-300"></StarIcon>
                   <h3 className="font-serif text-xl gradient-underline">
@@ -195,9 +202,14 @@ export const AboutSection = () => {
             {/* Book */}
             <Card className="h-[340px] md:col-span-2 lg:col-span-1">
               <CardHeader title="Reading" />
-              <div className="w-40 mx-auto mt-2 md:mt-0">
+              <motion.div
+                className="w-40 mx-auto mt-2 md:mt-0"
+                whileHover={{ scale: 0.95 }}
+                transition={{ type: "ease"}}
+                style={{ overflow: "hidden" }}
+              >
                 <Image src={bookImage} alt="book cover"></Image>
-              </div>
+              </motion.div>
             </Card>
           </div>
         </div>
