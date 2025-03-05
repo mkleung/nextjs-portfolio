@@ -1,19 +1,17 @@
 import type { Metadata } from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import {  Poppins, Work_Sans } from 'next/font/google';
 import './globals.css';
 import { twMerge } from 'tailwind-merge'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-// const calistoga = Calistoga({
-//   subsets: ['latin'],
-//   variable: '--font-serif',
-//   weight: '400',
-// });
+const poppins = Poppins({
+  subsets: ['latin'], variable: '--font-sans',
+  weight: '500'
+});
 
-const outfit = Outfit({
+const work_sans = Work_Sans({
   subsets: ['latin'],
   variable: '--font-serif',
-  weight: '400',
+  weight: '700',
 });
 
 
@@ -30,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(inter.variable, outfit.variable, "bg-gray-800 text-white antialiased font-sans")}>{children}</body>
+      <body className={twMerge(poppins.variable, work_sans.variable, "bg-gray-800 text-white antialiased font-sans")}>{children}</body>
     </html>
   );
 }

@@ -27,7 +27,8 @@ export const Footer = () => {
       ></div>
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:justify-between">
-          <div className="text-white/40">&copy; 2025. All rights reserved.</div>
+          <div>&copy; 2025. All rights reserved.</div>
+          <div className="font-semibold"> Thank you for visiting! </div>
           <nav className="flex flex-col items-center gap-8 md:flex-row">
             {footerLinks.map((link) => (
               <a
@@ -37,7 +38,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="font-semibold">{link.title}</span>
+                <span className="">{link.title}</span>
                 <ArrowUpRightIcon className="w-4 h-4" />
               </a>
             ))}

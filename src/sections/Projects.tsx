@@ -30,8 +30,9 @@ const portfolioProjects = [
     year: "2022",
     title: "The Meal Butler",
     results: [
-      { title: "The Meal Butler is a comprehensive meal delivery service project developed as part of an online course" },
-      { title: "Built in ReactJs, Python/Flask and MongoDB" },
+      { title: "The Meal Butler is a meal delivery project developed as part of a course" },
+      { title: "Features include user authentication, Maps Api and a no sql database" },
+      { title: "Built using Visual studio code and in ReactJs, Flask, Bootstrap and MongoDB" },
     ],
     link: "https://mkleung.github.io/jwfoods/",
     image: meal,
@@ -73,7 +74,7 @@ export const ProjectsSection = () => {
                   <ul className="flex flex-col gap-4 mt-4 md:mt-t">
                     {project.results.map((result) => (
                       <li className="flex gap-2 text-sm md:text-base text-white/50">
-                        <CheckCircleIcon className="size-5 md:size-6" />
+                        <CheckCircleIcon className="w-6 h-6" />
                         <span>{result.title}</span>
                       </li>
                     ))}

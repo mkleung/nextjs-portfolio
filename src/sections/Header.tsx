@@ -57,7 +57,6 @@ export const Header = () => {
               e.preventDefault();
               scrollToSection(section);
             }}
-            
           >
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </a>

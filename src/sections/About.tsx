@@ -109,7 +109,7 @@ export const AboutSection = () => {
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             {/* map */}
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+            <Card className="h-[340px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image
                 src={mapImage}
                 alt="map"
@@ -126,7 +126,7 @@ export const AboutSection = () => {
             </Card>
 
             {/* About */}
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader title="About Me" className="" />
 
               <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
@@ -164,14 +164,14 @@ export const AboutSection = () => {
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
             {/* Skills */}
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader title="Education" className="" />
               <div className="flex flex-col p-6 md:px-10 md:pt-0 gap-5">
-                <p>
-                  Bachelor of Computer Science, Carleton University, Ottawa,
-                  Canada
-                </p>
-
+                <ul className="list-disc pl-5">
+                  <li>Data Science Graduate Certificate, Toronto Metropolitan U.</li>
+                  <li>Bachelor of Computer Science, Carleton University, Ottawa</li>
+                </ul>
+        
                 <div className="inline-flex items-center gap-2">
                   <StarIcon className="size-8 text-emerald-300"></StarIcon>
                   <h3 className="font-serif text-xl gradient-underline">
@@ -193,7 +193,7 @@ export const AboutSection = () => {
             </Card>
 
             {/* Book */}
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+            <Card className="h-[340px] md:col-span-2 lg:col-span-1">
               <CardHeader title="Reading" />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="book cover"></Image>
