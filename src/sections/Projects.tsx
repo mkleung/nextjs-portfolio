@@ -99,7 +99,7 @@ export const ProjectsSection = () => {
                       whileTap={{ scale: 0.95 }}
                       whileHover={{ scale: 1.05 }}
                     >
-                      <span>View Live Site</span>
+                      <span>View Website</span>
                       <ArrowUpRightIcon className="size-4" />
                     </motion.button>
                   </a>
@@ -107,15 +107,15 @@ export const ProjectsSection = () => {
 
                 <motion.div
                   className="relative"
-                  whileHover={{ rotate: -3, scale: 1.1 }}
+                  whileHover={{ rotate: -3, scale: 1.05 }}
                 
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.3 }}
                   style={{ transformOrigin: 'bottom right' }}
                 >
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-10 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-xl "
+                    className="mt-10 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full  lg:w-auto lg:max-w-none rounded-xl "
                   ></Image>
                 </motion.div>
               </div>
