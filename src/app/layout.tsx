@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Michael Leung - Front End Developer",
   description: "Created with the help of Frontend Tribe",
 };
 
