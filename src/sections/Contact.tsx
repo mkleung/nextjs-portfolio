@@ -2,13 +2,18 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Modal from "@/components/Modal";
+import ContactModal from "@/components/ContactModal";
 
 export const ContactSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   return (
     <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
@@ -36,9 +41,11 @@ export const ContactSection = () => {
                 <ArrowUpRightIcon className="size-4" />
               </motion.button>
 
-              <Modal isOpen={isModalOpen} onClose={closeModal} title="My Modal">
-                <p>This is the modal content!</p>
-              </Modal>
+              <ContactModal
+                isOpen={isModalOpen}
+                onClose={closeModal}
+                title="Contact Me"
+              ></ContactModal>
             </div>
           </div>
         </div>

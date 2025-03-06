@@ -91,26 +91,24 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <a href={project.link} target="_blank">
-                    <motion.button
-                      className="bg-white text-gray-950 h-12 w-full 
-                    md:w-auto px-6 rounded-full font-semibold 
-                    inline-flex items-center justify-center gap-2 mt-8"
-                      whileTap={{ scale: 0.95 }}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <span>View Website</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </motion.button>
-                  </a>
+                  <motion.a
+                    href={project.link}
+                    target="_blank"
+                    className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 mt-5"
+                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
+                      Visit Website
+                    </div>
+                  </motion.a>
                 </div>
 
                 <motion.div
                   className="relative"
                   whileHover={{ rotate: -3, scale: 1.05 }}
-                
                   transition={{ duration: 0.3 }}
-                  style={{ transformOrigin: 'bottom right' }}
+                  style={{ transformOrigin: "bottom right" }}
                 >
                   <Image
                     src={project.image}
