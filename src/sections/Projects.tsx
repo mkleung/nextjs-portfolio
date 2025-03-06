@@ -113,7 +113,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-10 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full  lg:w-auto lg:max-w-none rounded-xl "
+                    className="mt-10 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:top-10 lg:h-full  lg:w-auto lg:max-w-none rounded-xl "
                   ></Image>
                 </motion.div>
               </div>

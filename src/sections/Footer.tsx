@@ -1,4 +1,7 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+"use client";
+import React, {useState} from 'react'
+
+import FooterLink from "@/components/FooterLink";
 
 const footerLinks = [
   {
@@ -16,6 +19,7 @@ const footerLinks = [
 ];
 
 export const Footer = () => {
+
   return (
     <footer className="relative z-10 overflow-x-clip">
       <div
@@ -27,20 +31,11 @@ export const Footer = () => {
       ></div>
       <div className="container">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:justify-between">
-          <div>&copy; 2025. All rights reserved.</div>
-          <div className="font-semibold"> Thank you for visiting! </div>
+          <div>&copy; {new Date().getFullYear()}. All rights reserved</div>
+      
           <nav className="flex flex-col items-center gap-8 md:flex-row">
             {footerLinks.map((link) => (
-              <a
-                href={link.url}
-                key={link.title}
-                className="inline-flex items-center gap-1.5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="">{link.title}</span>
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </a>
+              <FooterLink title={link.title} url={link.url} />
             ))}
           </nav>
         </div>
