@@ -7,6 +7,7 @@ import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 import Parallax from "@/components/parallax/Parallax";
+import MovingCard from "@/components/MovingCard";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export const HeroSection = () => {
               I specialize in transforming designs into functional,
               high-performing web applications. Let's discuss your next project.
             </p>
+       
 
             <div className="mt-5 text-center text-white/85 md:text-2xl flex justify-center items-center">
               <p className={cursive_script.className}>
@@ -63,7 +65,7 @@ export const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
-                      duration: 1,
+                      duration: 2,
                       delay: i / 10,
                     }}
                     key={i}
@@ -112,6 +114,8 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <MovingCard />
     </section>
   );
 };

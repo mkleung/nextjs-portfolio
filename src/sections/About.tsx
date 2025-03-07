@@ -19,6 +19,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import Map from "@/components/about-section/Map";
 import Reading from "@/components/about-section/Reading";
 import { SectionHeader } from "@/components/SectionHeader";
+import MovingCard from "@/components/MovingCard";
 
 const toolboxItems = [
   {
@@ -101,6 +102,9 @@ export const AboutSection = () => {
   return (
     <section id="about" className="">
       <div className="container">
+        
+       
+
         <div className="mt-10 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Map />

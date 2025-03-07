@@ -13,14 +13,12 @@ export default function Home() {
     <div>
       <Header />
       <HeroSection />
-
       <AboutSection />
       <ProjectsSection />
       <TapeSection />
       <Parallax />
       <TapeSection />
       <TestimonialsSection />
-
       <ContactSection />
       <Footer />
     </div>
