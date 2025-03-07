@@ -6,8 +6,7 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
-import Test from "@/components/Test";
-import MorphButton from "@/components/MorphButton";
+import Parallax from "@/components/parallax/Parallax";
 
 export default function Home() {
   return (
@@ -15,10 +14,10 @@ export default function Home() {
       <Header />
       <HeroSection />
 
-
-
       <AboutSection />
       <ProjectsSection />
+      <TapeSection />
+      <Parallax />
       <TapeSection />
       <TestimonialsSection />
 

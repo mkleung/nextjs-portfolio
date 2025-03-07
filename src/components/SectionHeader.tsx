@@ -1,5 +1,4 @@
 import React from "react";
-
 export const SectionHeader = ({
   title,
   eyebrow,
@@ -13,7 +12,7 @@ export const SectionHeader = ({
     <>
       <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
-          {eyebrow}
+        {eyebrow}
         </p>
       </div>
 

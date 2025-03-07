@@ -34,3 +34,5 @@ Links
 - https://blog.olivierlarose.com/tutorials
 
 - https://www.youtube.com/watch?v=hoh_QrGUHd0
+
+- https://gsap.com/community/forums/topic/36528-image-reveal-animation-pixel-art/

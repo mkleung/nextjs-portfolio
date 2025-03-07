@@ -6,7 +6,7 @@ import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-
+import Parallax from "@/components/parallax/Parallax";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -36,8 +36,6 @@ export const HeroSection = () => {
     <section id="home" className="py-32">
       <div className="container">
         <div className="flex flex-col items-center">
-
-
           <Image
             src={logo}
             className="w-24 h-24 rounded-full" // Updated size class
@@ -90,7 +88,6 @@ export const HeroSection = () => {
                 e.preventDefault();
                 scrollToSection("projects");
               }}
-
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
             >
@@ -112,10 +109,6 @@ export const HeroSection = () => {
                 👋 Let's Connect
               </span>
             </motion.a>
-
-  
-
-            
           </div>
         </div>
       </div>
