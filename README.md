@@ -24,3 +24,5 @@ Shift + Alt + F
 alt + z
 
 - https://www.aceternity.com/components
+
+- https://www.hover.dev/components/text

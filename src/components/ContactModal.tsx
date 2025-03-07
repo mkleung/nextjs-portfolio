@@ -74,7 +74,7 @@ const ContactModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
                 type="text"
                 id="name"
                 name="name"
-                className="mt-1 block w-full border-gray-300 rounded-lg shadow-sm px-2 py-1 "
+                className="bg-gray-700 mt-1 block w-full border-2 border-white rounded-lg shadow-sm px-2 py-1 text-white"
                 required
               />
             </div>
@@ -115,7 +115,7 @@ const ContactModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
               </label>
               <textarea
                 id="message"
-                className="mt-1 block w-full border-gray-300 rounded-lg shadow-sm px-2 py-1"
+                className="bg-gray-700 mt-1 block w-full border-2 border-white rounded-lg shadow-sm px-2 py-1 text-white"
                 required
                 name="message"
                 rows={4}
