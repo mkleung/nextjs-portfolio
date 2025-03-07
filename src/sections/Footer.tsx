@@ -32,6 +32,8 @@ export const Footer = () => {
         <div className="border-t border-white/15 py-6 text-sm flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div>&copy; {new Date().getFullYear()}. All rights reserved</div>
 
+          <div>Thank you for coming to my site!</div>
+
           <nav className="flex flex-col items-center gap-8 md:flex-row">
             {footerLinks.map((link) => (
               <FooterLink title={link.title} url={link.url} />

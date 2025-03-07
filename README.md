@@ -22,3 +22,5 @@ Shift + Alt + F
 
 - Word wrap classes (when classes get too long in tailwind)
 alt + z
+
+- https://www.aceternity.com/components
