@@ -7,6 +7,7 @@ import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 
+
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -35,6 +36,8 @@ export const HeroSection = () => {
     <section id="home" className="py-32">
       <div className="container">
         <div className="flex flex-col items-center">
+
+
           <Image
             src={logo}
             className="w-24 h-24 rounded-full" // Updated size class
@@ -111,6 +114,8 @@ export const HeroSection = () => {
             </motion.a>
 
   
+
+            
           </div>
         </div>
       </div>

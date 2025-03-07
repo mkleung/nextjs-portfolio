@@ -6,7 +6,6 @@ import meal from "@/assets/images/meal.png";
 
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
@@ -54,7 +53,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="pb-16 lg:py-24">
+    <section id="projects" className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Portfolio"
@@ -68,7 +67,7 @@ export const ProjectsSection = () => {
             // card
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky h-[450px]"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky h-full lg:h-[450px]"
               style={{ top: `calc(64px + ${projectIndex * 40}px` }}
             >
               {/* Card Content */}

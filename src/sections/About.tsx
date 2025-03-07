@@ -1,8 +1,5 @@
 "use client";
-import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import bookImage from "@/assets/images/deep.jpg";
-import Image from "next/image";
 
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import CssIcon from "@/assets/icons/css3.svg";
@@ -14,13 +11,14 @@ import VueIcon from "@/assets/icons/vuejs.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import NodeIcon from "@/assets/icons/node.svg";
 
-import mapImage from "@/assets/images/ottawa.png";
-import smileMemoji from "@/assets/images/mike.webp";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import StarIcon from "@/assets/icons/star.svg";
+import Map from "@/components/about-section/Map";
+import Reading from "@/components/about-section/Reading";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const toolboxItems = [
   {
@@ -66,7 +64,7 @@ const toolboxItems2 = [
 
 const hobbies = [
   {
-    title: "Painting",
+    title: "Pixel Art",
     emoji: "🎨",
     link: "",
   },
@@ -101,29 +99,14 @@ export const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
-    <section id="about" className="py-20 lg:py-10">
+    <section id="about" className="">
       <div className="container">
-        <div className="mt-20 flex flex-col gap-8">
+        <div className="mt-10 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            {/* map */}
-            <Card className="h-[340px] p-0 relative md:col-span-2 lg:col-span-1">
-              <Image
-                src={mapImage}
-                alt="map"
-                className="h-full w-full object-cover object-left-top "
-              ></Image>
-
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full ">
-                <Image
-                  src={smileMemoji}
-                  alt="map"
-                  className="size-20 rounded-full"
-                ></Image>
-              </div>
-            </Card>
+            <Map />
 
             {/* About */}
-            <Card className="h-[340px] md:col-span-3 lg:col-span-2">
+            <Card className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader title="About Me" className="" />
 
               <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
@@ -141,7 +124,7 @@ export const AboutSection = () => {
                   </h3>
                 </div>
 
-                <div className="h-[90px] mt-1" ref={constraintRef}>
+                <div className="h-full lg:h-[100px] mt-1" ref={constraintRef}>
                   {hobbies.map((hobby) => (
                     <motion.div
                       key={hobby.title}
@@ -163,14 +146,14 @@ export const AboutSection = () => {
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-5 lg:grid-cols-3">
             {/* Skills */}
-            <Card className="h-[340px] md:col-span-3 lg:col-span-2">
+            <Card className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2">
               <CardHeader title="Education" className="" />
-              <div className="flex flex-col p-6 md:px-10 md:pt-0 gap-5">
+              <div className="flex flex-col pt-0 px-6 pb-6 md:p-6 gap-5">
                 <ul className="list-disc pl-5 text-white/85 ">
                   <li>
                     Data Science Graduate Certificate, Toronto Metropolitan U.
                   </li>
-                  <li >
+                  <li>
                     Bachelor of Computer Science, Carleton University, Ottawa
                   </li>
                 </ul>
@@ -183,28 +166,21 @@ export const AboutSection = () => {
                 </div>
               </div>
 
-              <ToolboxItems
-                items={toolboxItems}
-                className=""
-                itemsWrapperClassName="animate-move-right [animation-duration:100s]"
-              />
-              <ToolboxItems
-                items={toolboxItems2}
-                className="mt-5"
-                itemsWrapperClassName="animate-move-left [animation-duration:100s]"
-              />
+              <div>
+                <ToolboxItems
+                  items={toolboxItems}
+                  className=""
+                  itemsWrapperClassName="animate-move-right [animation-duration:100s]"
+                />
+                <ToolboxItems
+                  items={toolboxItems2}
+                  className="mt-5"
+                  itemsWrapperClassName="animate-move-left [animation-duration:100s]"
+                />
+              </div>
             </Card>
 
-            {/* Book */}
-            <Card className="h-[340px] md:col-span-2 lg:col-span-1">
-              <CardHeader title="Reading" />
-              <motion.div
-                className="w-40 mx-auto mt-2 md:mt-0"
-                style={{ overflow: "hidden" }}
-              >
-                <Image src={bookImage} alt="book cover"></Image>
-              </motion.div>
-            </Card>
+            <Reading />
           </div>
         </div>
       </div>

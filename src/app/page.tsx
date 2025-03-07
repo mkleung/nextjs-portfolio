@@ -7,12 +7,15 @@ import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import Test from "@/components/Test";
+import MorphButton from "@/components/MorphButton";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <HeroSection />
+
+
 
       <AboutSection />
       <ProjectsSection />
