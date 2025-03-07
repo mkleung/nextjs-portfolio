@@ -145,7 +145,7 @@ export const AboutSection = () => {
                   {hobbies.map((hobby) => (
                     <motion.div
                       key={hobby.title}
-                      className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 me-2 mb-2 hover:cursor-grabbing"
+                      className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 me-2 mb-2 hover:cursor-grab active:cursor-grabbing"
                       drag
                       dragConstraints={constraintRef}
                       whileTap={{ scale: 0.95 }}

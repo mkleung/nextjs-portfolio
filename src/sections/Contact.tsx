@@ -3,6 +3,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ContactModal from "@/components/ContactModal";
+import ContactForm from "@/components/ContactForm";
 
 export const ContactSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,6 +47,8 @@ export const ContactSection = () => {
                 onClose={closeModal}
                 title="Contact Me"
               ></ContactModal>
+
+              {/* <ContactForm /> */}
             </div>
           </div>
         </div>
