@@ -7,7 +7,7 @@ import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 import Parallax from "@/components/parallax-section/Parallax";
-import MovingCard from "@/components/about-section/MovingMap";
+import MovingCard from "@/components/MovingCard";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],

@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import mapImage from "@/assets/images/ottawa.png";
@@ -8,7 +8,12 @@ const cardRotation = 10;
 const cardScale = 1.07;
 const sheenSize = 500;
 
-const MovingMap: React.FC = () => {
+
+interface MovingCardProps {
+  children: ReactNode; // Define children prop type
+}
+
+const MovingCard: React.FC<MovingCardProps> = ({ children }) => {
   const xPcnt = useSpring(0, { bounce: 0 });
   const yPcnt = useSpring(0, { bounce: 0 });
   const scale = useSpring(1, { bounce: 0 });
@@ -91,30 +96,11 @@ const MovingMap: React.FC = () => {
             width: sheenSize,
           }}
         />
-        <CardContent />
+        {children}
       </motion.div>
     </div>
   );
 };
 
-export default MovingMap;
+export default MovingCard;
 
-const CardContent = () => {
-  return (
-    <>
-      <Image
-        src={mapImage}
-        alt="map"
-        className="h-full w-full object-cover object-left-top "
-      ></Image>
-
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full ">
-        <Image
-          src={smileMemoji}
-          alt="map"
-          className="size-20 rounded-full"
-        ></Image>
-      </div>
-    </>
-  );
-};

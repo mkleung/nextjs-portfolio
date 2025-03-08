@@ -11,9 +11,6 @@ import VueIcon from "@/assets/icons/vuejs.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import NodeIcon from "@/assets/icons/node.svg";
 
-import PizzaIcon from "@/assets/icons/pizza.png";
-import PaintIcon from "@/assets/icons/paint.png";
-
 import { CardHeader } from "@/components/CardHeader";
 import { Skills } from "@/components/about-section/Skills";
 import { motion } from "framer-motion";
@@ -21,9 +18,11 @@ import { useRef } from "react";
 import StarIcon from "@/assets/icons/star.svg";
 
 import Reading from "@/components/about-section/Reading";
+import MapCard from "@/components/about-section/MapCard";
 
-import MovingMap from "@/components/about-section/MovingMap";
-import Image, { StaticImageData } from "next/image";
+
+
+
 
 const skills = [
   {
@@ -102,8 +101,8 @@ export const AboutSection = () => {
       <div className="container">
         <div className="mt-10 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            {/* <Map /> */}
-            <MovingMap />
+            <MapCard />
+       
 
             {/* About */}
             <Card className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2">
