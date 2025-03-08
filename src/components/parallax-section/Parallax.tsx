@@ -5,7 +5,6 @@ import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useRef, useEffect } from "react";
 import Slide from "./Slide";
-import StarIcon from "@/assets/icons/star.svg";
 
 const Parallax = () => {
   useEffect(() => {
@@ -17,7 +16,7 @@ const Parallax = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const container = useRef<HTMLDivElement>(null); // Specify the type here
+  const container = useRef<HTMLDivElement>(null); 
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -30,13 +29,13 @@ const Parallax = () => {
       <Slide
         imgUrl={Picture1.src}
         direction={"left"}
-        left={"-20%"}
+        left={"-10%"}
         progress={scrollYProgress}
       />
       <Slide
         imgUrl={Picture2.src}
         direction={"right"}
-        left={"-110%"}
+        left={"-100%"}
         progress={scrollYProgress}
       />
       <div className="h-full" />

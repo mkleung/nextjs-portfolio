@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { TechIcon } from "./TechIcon";
+import { TechIcon } from "../TechIcon";
 import { twMerge } from "tailwind-merge";
 
-export const ToolboxItems = ({
+export const Skills = ({
   items,
   className,
   itemsWrapperClassName,

@@ -6,8 +6,8 @@ import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-import Parallax from "@/components/parallax/Parallax";
-import MovingCard from "@/components/MovingCard";
+import Parallax from "@/components/parallax-section/Parallax";
+import MovingCard from "@/components/about-section/MovingMap";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -80,6 +80,7 @@ export const HeroSection = () => {
                 ))}
               </p>
             </div>
+            
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-center mt-5">
@@ -115,7 +116,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <MovingCard />
+     
     </section>
   );
 };

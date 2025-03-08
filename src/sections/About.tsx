@@ -11,17 +11,21 @@ import VueIcon from "@/assets/icons/vuejs.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import NodeIcon from "@/assets/icons/node.svg";
 
+import PizzaIcon from "@/assets/icons/pizza.png";
+import PaintIcon from "@/assets/icons/paint.png";
+
 import { CardHeader } from "@/components/CardHeader";
-import { ToolboxItems } from "@/components/ToolboxItems";
+import { Skills } from "@/components/about-section/Skills";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import StarIcon from "@/assets/icons/star.svg";
-import Map from "@/components/about-section/Map";
-import Reading from "@/components/about-section/Reading";
-import { SectionHeader } from "@/components/SectionHeader";
-import MovingCard from "@/components/MovingCard";
 
-const toolboxItems = [
+import Reading from "@/components/about-section/Reading";
+
+import MovingMap from "@/components/about-section/MovingMap";
+import Image, { StaticImageData } from "next/image";
+
+const skills = [
   {
     title: "Javascript",
     iconType: JavascriptIcon,
@@ -44,7 +48,7 @@ const toolboxItems = [
   },
 ];
 
-const toolboxItems2 = [
+const skills2 = [
   {
     title: "Laravel",
     iconType: LaravelIcon,
@@ -67,32 +71,26 @@ const hobbies = [
   {
     title: "Pixel Art",
     emoji: "🎨",
-    link: "",
   },
   {
     title: "Pizza Making",
     emoji: "🍕",
-    link: "",
   },
   {
     title: "Bollywood Movies",
     emoji: "📺",
-    link: "",
   },
   {
     title: "Photography",
     emoji: "📷",
-    link: "",
   },
   {
     title: "Language Learning",
     emoji: "🌍",
-    link: "",
   },
   {
     title: "Biking",
     emoji: "🚵‍♂️",
-    link: "",
   },
 ];
 
@@ -102,12 +100,10 @@ export const AboutSection = () => {
   return (
     <section id="about" className="">
       <div className="container">
-        
-       
-
         <div className="mt-10 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Map />
+            {/* <Map /> */}
+            <MovingMap />
 
             {/* About */}
             <Card className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2">
@@ -138,8 +134,9 @@ export const AboutSection = () => {
                       whileTap={{ scale: 0.95 }}
                       whileHover={{ scale: 1.05 }}
                     >
-                      <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-700 dark:bg-gray-700 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black ">
-                        {hobby.title} {hobby.emoji}
+                      <span className="relative inline-flex items-center px-5 py-1 transition-colors ease-in duration-200 bg-gray-700 dark:bg-gray-700 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
+                        {hobby.title}
+                        <span className="ml-2">{hobby.emoji}</span>
                       </span>
                     </motion.div>
                   ))}
@@ -171,13 +168,13 @@ export const AboutSection = () => {
               </div>
 
               <div>
-                <ToolboxItems
-                  items={toolboxItems}
+                <Skills
+                  items={skills}
                   className=""
                   itemsWrapperClassName="animate-move-right [animation-duration:100s]"
                 />
-                <ToolboxItems
-                  items={toolboxItems2}
+                <Skills
+                  items={skills2}
                   className="mt-5"
                   itemsWrapperClassName="animate-move-left [animation-duration:100s]"
                 />

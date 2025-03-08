@@ -2,8 +2,6 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ContactModal from "@/components/ContactModal";
-import ContactForm from "@/components/ContactForm";
 import { DragCloseDrawerExample } from "@/components/DragCloseDrawer";
 
 export const ContactSection = () => {

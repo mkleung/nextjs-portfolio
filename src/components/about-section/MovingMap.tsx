@@ -1,17 +1,19 @@
 import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import mapImage from "@/assets/images/ottawa.png";
+import smileMemoji from "@/assets/images/mike.webp";
 
-const cardRotation = 15;
+const cardRotation = 10;
 const cardScale = 1.07;
 const sheenSize = 500;
 
-const MovingCard: React.FC = () => {
+const MovingMap: React.FC = () => {
   const xPcnt = useSpring(0, { bounce: 0 });
   const yPcnt = useSpring(0, { bounce: 0 });
   const scale = useSpring(1, { bounce: 0 });
-  const mouseX = useSpring(0, { bounce: 0});
-  const mouseY = useSpring(0, { bounce: 0});
+  const mouseX = useSpring(0, { bounce: 0 });
+  const mouseY = useSpring(0, { bounce: 0 });
 
   const rotateX = useTransform(
     yPcnt,
@@ -23,9 +25,8 @@ const MovingCard: React.FC = () => {
     [-0.5, 0.5],
     [`-${cardRotation}deg`, `${cardRotation}deg`]
   );
-
-  const sheenX = useTransform(() => mouseX.get() - sheenSize / 2)
-  const sheenY = useTransform(() => mouseY.get() - sheenSize / 2)
+  const sheenX = useTransform(mouseX, (value) => value - sheenSize / 2);
+  const sheenY = useTransform(mouseY, (value) => value - sheenSize / 2);
 
   const getMousePosition = (e: React.MouseEvent<Element, MouseEvent>) => {
     const { width, height, left, top } =
@@ -54,11 +55,10 @@ const MovingCard: React.FC = () => {
   };
 
   const handleMouseEnter: MouseEventHandler = (e) => {
-    
-    const {currentMouseX, currentMouseY} = getMousePosition(e)
+    const { currentMouseX, currentMouseY } = getMousePosition(e);
     scale.set(cardScale);
-    mouseX.jump(currentMouseX)
-    mouseY.jump(currentMouseY)
+    mouseX.jump(currentMouseX);
+    mouseY.jump(currentMouseY);
   };
 
   const handleMouseLeave: MouseEventHandler = (e) => {
@@ -68,9 +68,9 @@ const MovingCard: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
+    <div className="h-full lg:h-[340px] p-0 relative md:col-span-2 lg:col-span-1">
       <motion.div
-        className="flex flex-col h-fill w-64 rounded-xl bg-gradient-to-br from-indigo-400 to-violet-400 p-4 shadow-lg overflow-hidden group"
+        className="flex flex-col h-full  rounded-xl  shadow-lg overflow-hidden group hover:cursor-zoom-in"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -82,7 +82,7 @@ const MovingCard: React.FC = () => {
         }}
       >
         <motion.div
-          className="absolute z-10 opacity-40 rounded-full blur-md group-hover:opacity-30 transition-opacity duration-200"
+          className="absolute z-10 opacity-5 rounded-full blur-md group-hover:opacity-20 transition-opacity duration-200"
           style={{
             background: "radial-gradient(white, #3984ff00 80%)",
             left: sheenX,
@@ -97,31 +97,23 @@ const MovingCard: React.FC = () => {
   );
 };
 
-export default MovingCard;
+export default MovingMap;
 
 const CardContent = () => {
   return (
     <>
-      <div className="flex flex-col gap-0 mt-4">
-        <h1 className="text-xl font-semibold tracking-tight leading-tight">
-          Built With Code
-        </h1>
-        <p className="text-sm text-neutral-700 font-mono">YouTube</p>
-      </div>
-      <div className="mt-auto flex justify-between items-center">
-        <span className="text-[0.6rem] font-medium px-2 py-[3px] border-neutral-700 text-neutral-700 border-[1px] rounded-sm">
-          Est. January 2021
-        </span>
-        <button className="fill-[#FF0000] w-6 opacity-70">
-          <svg
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>YouTube</title>
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-          </svg>
-        </button>
+      <Image
+        src={mapImage}
+        alt="map"
+        className="h-full w-full object-cover object-left-top "
+      ></Image>
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full ">
+        <Image
+          src={smileMemoji}
+          alt="map"
+          className="size-20 rounded-full"
+        ></Image>
       </div>
     </>
   );
