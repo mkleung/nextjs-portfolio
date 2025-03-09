@@ -10,27 +10,27 @@ import { Card } from "@/components/Card";
 const hobbies = [
     {
       title: "Pixel Art",
-      emoji: "🎨",
+      emoji: '🎨',
     },
     {
       title: "Pizza Making",
-      emoji: "🍕",
+      emoji: '🍕',
     },
     {
       title: "Bollywood Movies",
-      emoji: "📺",
+      emoji: '📺',
     },
     {
       title: "Photography",
-      emoji: "📷",
+      emoji: '📷',
     },
     {
       title: "Language Learning",
-      emoji: "🌍",
+      emoji: '🌍',
     },
     {
       title: "Biking",
-      emoji: "🚵‍♂️",
+      emoji: '🚵‍♂️',
     },
   ];
 
@@ -43,10 +43,10 @@ export const AboutCard  = () => {
 
         <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
           <p className="text-white/85 ">
-            Hello! I'm a dedicated front-end developer with a passion for
+            Hello! I&apos;m a dedicated front-end developer with a passion for
             delivering user-friendly websites that captivates audiences. I also
             love to help the local community with technology solutions that
-            enhance people's lives.
+            enhance people&apos;s lives.
           </p>
 
           <div className="inline-flex items-center gap-2">

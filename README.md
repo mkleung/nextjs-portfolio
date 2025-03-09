@@ -8,6 +8,7 @@ https://youtu.be/ELssXP1sTC8?si=jYqxAJhK4hfzc8yM&t=15815
 First, run the development server:
 
 ```npm run dev```
+```npm run build```
 
 Open [http://localhost:3000](http://localhost:3000)
 
@@ -24,6 +25,8 @@ Shift + Alt + F
 alt + z
 
 Links
+
+- https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/
 
 - https://www.aceternity.com/components
 

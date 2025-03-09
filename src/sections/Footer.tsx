@@ -35,8 +35,10 @@ export const Footer = () => {
           <div>Thank you for coming to my site!</div>
 
           <nav className="flex flex-col items-center gap-8 md:flex-row">
-            {footerLinks.map((link) => (
-              <FooterLink title={link.title} url={link.url} />
+            {footerLinks.map((link, index) => (
+              <div key={index}>
+                <FooterLink title={link.title} url={link.url} />
+              </div>
             ))}
           </nav>
         </div>

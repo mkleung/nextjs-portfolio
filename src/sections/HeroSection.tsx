@@ -45,10 +45,7 @@ export const HeroSection = () => {
           <div className="max-w-2xl mx-auto">
             <motion.h1 className="font-serif text-3xl text-center mt-8"
             >
-              Hi I'm{" "}
-              <a href={href} className="gradient-underline">
-                Michael Leung
-              </a>
+              Hi I&apos;m <a href={href} className="gradient-underline">Michael Leung</a>
               , Software Developer
             </motion.h1>
 
@@ -59,18 +56,18 @@ export const HeroSection = () => {
 
             <div className="mt-5 text-center text-white/85 md:text-2xl flex justify-center items-center">
               <p className={cursive_script.className}>
-                {subtitle.map((element, i) => (
+                {subtitle.map((element, index) => (
                   <motion.span
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
                       duration: 2,
-                      delay: i / 10,
+                      delay: index ,
                     }}
-                    key={i}
+                    key={index}
                   >
                     {element}{" "}
-                    {i != subtitle.length - 1 && (
+                    {index != subtitle.length - 1 && (
                       <span className="mx-2">
                         <ArrowRight className="w-10 h-10 inline mr-2" />
                       </span>
@@ -108,7 +105,7 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                👋 Let's Connect
+                 Get in touch
               </span>
             </motion.a>
           </div>
