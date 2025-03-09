@@ -18,7 +18,7 @@ export default function Home() {
       <TapeSection />
       <Parallax />
       <TapeSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <ContactSection />
       <Footer />
     </div>

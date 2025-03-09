@@ -21,12 +21,12 @@ const Slide: React.FC<SlideProps> = ({ direction, progress, left, imgUrl }) => {
   const phrases = [
     "Mobile Friendly",
     "Accessibility",
-    "Multilingual",
+    "Wireframing",
     "SEO Optimized",
     "UI/UX",
     "Fast Loading",
     'Full-stack Development',
-    'CI/CD',
+    'Animations',
     'Google Analytics',
     'Web Design',
     'Testing'

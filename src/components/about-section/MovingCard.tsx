@@ -8,7 +8,6 @@ const cardRotation = 10;
 const cardScale = 1.07;
 const sheenSize = 500;
 
-
 interface MovingCardProps {
   children: ReactNode; // Define children prop type
 }
@@ -103,4 +102,3 @@ const MovingCard: React.FC<MovingCardProps> = ({ children }) => {
 };
 
 export default MovingCard;
-

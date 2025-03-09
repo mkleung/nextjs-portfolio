@@ -2,11 +2,27 @@ import React from "react";
 import mapImage from "@/assets/images/ottawa.png";
 import smileMemoji from "@/assets/images/mike.webp";
 import Image from "next/image";
-import MovingCard from "@/components/MovingCard";
+import MovingCard from "@/components/about-section/MovingCard";
+import { motion } from "framer-motion";
 
 const MapCard = () => {
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <MovingCard>
         <Image
           src={mapImage}
@@ -21,7 +37,7 @@ const MapCard = () => {
           ></Image>
         </div>
       </MovingCard>
-    </>
+    </motion.div>
   );
 };
 

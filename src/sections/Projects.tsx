@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 import kanata from "@/assets/images/kanata.png";
 import meal from "@/assets/images/meal.png";
@@ -62,7 +63,23 @@ export const ProjectsSection = () => {
         />
 
         {/* Card Wrapper */}
-        <div className="flex flex-col mt-10 md:mt-20 gap-20">
+        <motion.div
+          className="flex flex-col mt-10 md:mt-20 gap-20"
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
           {portfolioProjects.map((project, projectIndex) => (
             // card
             <Card
@@ -98,7 +115,7 @@ export const ProjectsSection = () => {
                     whileHover={{ scale: 1.05 }}
                   >
                     <div className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                      Visit Website
+                      Visit Website 
                     </div>
                   </motion.a>
                 </div>
@@ -119,7 +136,7 @@ export const ProjectsSection = () => {
             </Card>
             // End of card
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

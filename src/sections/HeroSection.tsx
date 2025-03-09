@@ -6,8 +6,7 @@ import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/images/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-import Parallax from "@/components/parallax-section/Parallax";
-import MovingCard from "@/components/MovingCard";
+
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -44,17 +43,17 @@ export const HeroSection = () => {
           />
 
           <div className="max-w-2xl mx-auto">
-            <h1 className="font-serif text-3xl text-center mt-8">
+            <motion.h1 className="font-serif text-3xl text-center mt-8"
+            >
               Hi I'm{" "}
               <a href={href} className="gradient-underline">
                 Michael Leung
               </a>
               , Software Developer
-            </h1>
+            </motion.h1>
 
             <p className="mt-5 text-center text-white/85 md:text-md">
-              I specialize in transforming designs into functional,
-              high-performing web applications. Let's discuss your next project.
+            I specialize in converting innovative designs into dynamic, high-performance web applications that deliver exceptional user experiences.
             </p>
        
 
