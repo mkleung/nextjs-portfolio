@@ -22,7 +22,7 @@ const MapCard = () => {
       viewport={{
         once: true,
       }}
-     className="card lg:h-[340px] h-full w-full lg:col-span-1"
+     className="card md:h-[340px] h-full w-full md:col-span-1"
     >
       <MovingCard>
         <Image

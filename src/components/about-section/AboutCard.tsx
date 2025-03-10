@@ -51,7 +51,7 @@ export const AboutCard = () => {
         once: true,
         margin: '-100px' 
       }}
-      className="card card lg:h-[340px] h-full lg:col-span-2"
+      className="card card md:h-[340px] h-full md:col-span-2"
     >
       <CardHeader title="About Me" className="" />
 

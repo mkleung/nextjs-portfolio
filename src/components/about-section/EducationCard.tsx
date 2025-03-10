@@ -74,7 +74,7 @@ const EducationCard = () => {
       viewport={{
         once: true,
       }}
-      className="card card lg:h-[340px] h-full lg:col-span-2"
+      className="card card md:h-[340px] h-full md:col-span-2"
     >
       <CardHeader title="Education" className="" />
       <div className="flex flex-col px-6 pt-0 pb-6 gap-5">
