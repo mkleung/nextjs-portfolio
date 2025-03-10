@@ -8,6 +8,7 @@ import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import Parallax from "@/components/parallax-section/Parallax";
 
+
 export default function Home() {
   return (
     <div>

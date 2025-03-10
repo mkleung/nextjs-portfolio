@@ -10,7 +10,6 @@
     .card {
         @apply bg-gray-700 rounded-3xl relative z-0 overflow-hidden after:z-10  after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none
     }
-
 }
 
 @layer utilities {
@@ -21,6 +20,14 @@
 
 
 /* Custom Styles */
+
+.gradient-border {
+    /* border: 4px solid transparent; */
+    border-image: linear-gradient(to right, theme('colors.emerald.300'), theme('colors.sky.400')) 1;
+}
+
+
+
 .gradient-underline {
     position: relative;
   }

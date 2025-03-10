@@ -48,7 +48,7 @@ export const DragCloseDrawerExample = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="bg-gray-700 mt-1 block w-full border-2 border-white rounded-lg shadow-sm px-2 py-1 text-white"
+                  className="focus:outline-none bg-gray-700 mt-1 block w-full border-2 gradient-border rounded-lg  px-2 py-1 text-white"
                   required
                 />
               </div>
@@ -66,7 +66,7 @@ export const DragCloseDrawerExample = () => {
                   id="email"
                   name="email"
                   placeholder="example@example.com"
-                  className="bg-gray-700 mt-1 block w-full border-2 border-white rounded-lg shadow-sm px-2 py-1 text-white"
+                  className="focus:outline-none bg-gray-700 mt-1 block w-full border-2 gradient-border rounded-lg shadow-sm px-2 py-1 text-white"
                   required
                 />
               </div>
@@ -82,7 +82,7 @@ export const DragCloseDrawerExample = () => {
               </label>
               <textarea
                 id="message"
-                className="bg-gray-700 mt-1 block w-full border-2 border-white rounded-lg shadow-sm px-2 py-1 text-white"
+                className="focus:outline-none bg-gray-700 mt-1 block w-full border-2 gradient-border rounded-lg shadow-sm px-2 py-1 text-white"
                 required
                 name="message"
                 rows={4}

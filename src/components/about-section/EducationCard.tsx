@@ -127,11 +127,11 @@ const EducationCard = () => {
       <div className="flex flex-col gap-5">
         <SkillsList
           skills={frontSkills}
-          itemsWrapperClassName="animate-move-left [animation-duration:100s]"
+          itemsWrapperClassName="animate-move-left [animation-duration:100s] hover:animate-none"
         />
         <SkillsList
           skills={backSkills}
-          itemsWrapperClassName="animate-move-right [animation-duration:100s]"
+          itemsWrapperClassName="animate-move-right [animation-duration:100s] hover:animate-none"
         />
       </div>
     </motion.div>
