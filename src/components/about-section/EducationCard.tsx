@@ -60,7 +60,6 @@ const skills2 = [
 const EducationCard = () => {
   return (
     <motion.div
-      className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2 card"
       initial={{
         opacity: 0,
         y: -50,
@@ -75,6 +74,7 @@ const EducationCard = () => {
       viewport={{
         once: true,
       }}
+      className="card card lg:h-[340px] h-full lg:col-span-2"
     >
       <CardHeader title="Education" className="" />
       <div className="flex flex-col px-6 pt-0 pb-6 gap-5">

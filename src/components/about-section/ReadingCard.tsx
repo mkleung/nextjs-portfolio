@@ -9,7 +9,7 @@ import MovingCard from "./MovingCard";
 const ReadingCard = () => {
   return (
     <motion.div
-    className="card"
+      className="card lg:h-[340px] h-full w-full lg:col-span-1"
       initial={{
         opacity: 0,
         x: 50,
@@ -23,18 +23,17 @@ const ReadingCard = () => {
       }}
       viewport={{
         once: true,
+        margin: '-100px' 
       }}
     >
+      <CardHeader title="Reading" />
 
-        <CardHeader title="Reading" />
-
-        <div
-          className="w-40 mx-auto mt-2 md:mt-0 rounded"
-          style={{ overflow: "hidden" }}
-        >
-          <Image src={bookImage} alt="book cover"></Image>
-        </div>
-
+      <div
+        className="w-40 mx-auto mt-2 md:mt-0 rounded"
+        style={{ overflow: "hidden" }}
+      >
+        <Image src={bookImage} alt="book cover"></Image>
+      </div>
     </motion.div>
   );
 };

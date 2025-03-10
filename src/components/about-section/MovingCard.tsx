@@ -72,7 +72,7 @@ const MovingCard: React.FC<MovingCardProps> = ({ children }) => {
   };
 
   return (
-    <div className="h-full lg:h-[340px] p-0 relative md:col-span-2 lg:col-span-1">
+    <>
       <motion.div
         className="flex flex-col h-full  rounded-xl  shadow-lg overflow-hidden group hover:cursor-zoom-in"
         onMouseMove={handleMouseMove}
@@ -97,7 +97,7 @@ const MovingCard: React.FC<MovingCardProps> = ({ children }) => {
         />
         {children}
       </motion.div>
-    </div>
+    </>
   );
 };
 

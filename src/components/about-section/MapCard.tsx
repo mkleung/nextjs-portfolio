@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 const MapCard = () => {
   return (
     <motion.div
-    
       initial={{
         opacity: 0,
         x: -50,
@@ -23,6 +22,7 @@ const MapCard = () => {
       viewport={{
         once: true,
       }}
+     className="card lg:h-[340px] h-full w-full lg:col-span-1"
     >
       <MovingCard>
         <Image
