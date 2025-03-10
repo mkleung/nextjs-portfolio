@@ -6,7 +6,6 @@ import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-import { Test } from "@/components/RevealText";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
