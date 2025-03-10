@@ -1,16 +1,14 @@
 "use client";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Phrase from "./Phrase";
 
 interface SlideProps {
   direction: "left" | "right";
   progress: MotionValue<number>;
-  left: string | number; 
-  imgUrl: string | StaticImport;
+  left: string | number;
 }
 
-const Slide: React.FC<SlideProps> = ({ direction, progress, left, imgUrl }) => {
+const Slide: React.FC<SlideProps> = ({ direction, progress, left }) => {
   const tempDirection = direction === "left" ? -1 : 1;
   const translateX = useTransform(
     progress,

@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import logo from "@/assets/images/mike.jpeg";
-import ArrowRight from "@/assets/images/arrow-right.svg";
+import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -43,16 +42,19 @@ export const HeroSection = () => {
           />
 
           <div className="max-w-2xl mx-auto">
-            <motion.h1 className="font-serif text-3xl text-center mt-8"
-            >
-              Hi I&apos;m <a href={href} className="gradient-underline">Michael Leung</a>
-              , Software Developer
+            <motion.h1 className="font-serif text-3xl text-center mt-8">
+              Hi I&apos;m{" "}
+              <a href={href} className="gradient-underline">
+                Michael Leung
+              </a>
+              , Front End Developer
             </motion.h1>
 
             <p className="mt-5 text-center text-white/85 md:text-md">
-            I specialize in converting innovative designs into dynamic, high-performance web applications that deliver exceptional user experiences.
+              I specialize in converting innovative designs into dynamic,
+              high-performance web applications that deliver exceptional user
+              experiences.
             </p>
-       
 
             <div className="mt-5 text-center text-white/85 md:text-2xl flex justify-center items-center">
               <p className={cursive_script.className}>
@@ -62,7 +64,7 @@ export const HeroSection = () => {
                     animate={{ opacity: 1 }}
                     transition={{
                       duration: 0.5,
-                      delay: index/2 ,
+                      delay: index / 2,
                     }}
                     key={index}
                   >
@@ -76,7 +78,6 @@ export const HeroSection = () => {
                 ))}
               </p>
             </div>
-            
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-center mt-5">
@@ -105,14 +106,12 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                 Get in touch
+                Get in touch
               </span>
             </motion.a>
           </div>
         </div>
       </div>
-
-     
     </section>
   );
 };

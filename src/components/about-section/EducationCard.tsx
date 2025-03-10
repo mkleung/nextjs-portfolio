@@ -2,67 +2,102 @@ import React from "react";
 import { Card } from "../Card";
 import { CardHeader } from "../CardHeader";
 import StarIcon from "@/assets/icons/star.svg";
-import { Skills } from "@/components/about-section/Skills";
+
 import { motion } from "framer-motion";
 
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import CssIcon from "@/assets/icons/css3.svg";
+import FigmaIcon from "@/assets/icons/figma.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
 import WordPressIcon from "@/assets/icons/wordpress.svg";
 import LaravelIcon from "@/assets/icons/laravel.svg";
 import VueIcon from "@/assets/icons/vuejs.svg";
-import PythonIcon from "@/assets/icons/python.svg";
+import MongoIcon from "@/assets/icons/mongodb.svg";
+import FlaskIcon from "@/assets/icons/flask.svg";
 import NodeIcon from "@/assets/icons/node.svg";
+import BootstrapIcon from "@/assets/icons/bootstrap.svg";
+import NextIcon from "@/assets/icons/next.svg";
+import SkillsList from "./SkillsList";
 
-const skills = [
-  {
-    title: "Javascript",
-    iconType: JavascriptIcon,
-  },
-  {
-    title: "React",
-    iconType: ReactIcon,
-  },
-  {
-    title: "CSS3",
-    iconType: CssIcon,
-  },
-  {
-    title: "HTML5",
-    iconType: HTMLIcon,
-  },
-  {
-    title: "Vue",
-    iconType: VueIcon,
-  },
-];
-
-const skills2 = [
-  {
-    title: "Laravel",
-    iconType: LaravelIcon,
-  },
-  {
-    title: "WordPress",
-    iconType: WordPressIcon,
-  },
-  {
-    title: "Flask",
-    iconType: PythonIcon,
-  },
-  {
-    title: "Next Js",
-    iconType: NodeIcon,
-  },
-];
+type Skill = {
+  title: string;
+  icon: React.ReactNode;
+  type: "front" | "back";
+};
 
 const EducationCard = () => {
+  const skills: Skill[] = [
+    {
+      title: "NextJs",
+      icon: <NextIcon />,
+      type: "back",
+    },
+    {
+      title: "React",
+      icon: <ReactIcon />,
+      type: "front",
+    },
+    {
+      title: "Javascript",
+      icon: <JavascriptIcon />,
+      type: "front",
+    },
+    {
+      title: "Figma",
+      icon: <FigmaIcon />,
+      type: "front",
+    },
+    {
+      title: "TailwindCSS",
+      icon: <TailwindIcon />,
+      type: "front",
+    },
+    {
+      title: "VueJS",
+      icon: <VueIcon />,
+      type: "front",
+    },
+    {
+      title: "Bootstrap",
+      icon: <BootstrapIcon />,
+      type: "front",
+    },
+    {
+      title: "Laravel",
+      icon: <LaravelIcon />,
+      type: "back",
+    },
+    {
+      title: "WordPress",
+      icon: <WordPressIcon />,
+      type: "back",
+    },
+    {
+      title: "Flask",
+      icon: <FlaskIcon />,
+      type: "back",
+    },
+    {
+      title: "NextJs",
+      icon: <NodeIcon />,
+      type: "back",
+    },
+    {
+      title: "MongoDB",
+      icon: <MongoIcon />,
+      type: "back",
+    },
+  ];
+
+  const frontSkills = skills.filter((skill) => skill.type === "front");
+  const backSkills = skills.filter((skill) => skill.type === "back");
+
   return (
     <motion.div
       initial={{
         opacity: 0,
-        y: -50,
+        y: 100,
       }}
       whileInView={{
         opacity: 1,
@@ -89,16 +124,14 @@ const EducationCard = () => {
         </div>
       </div>
 
-      <div>
-        <Skills
-          items={skills}
-          className=""
-          itemsWrapperClassName="animate-move-right [animation-duration:100s]"
-        />
-        <Skills
-          items={skills2}
-          className="mt-5"
+      <div className="flex flex-col gap-5">
+        <SkillsList
+          skills={frontSkills}
           itemsWrapperClassName="animate-move-left [animation-duration:100s]"
+        />
+        <SkillsList
+          skills={backSkills}
+          itemsWrapperClassName="animate-move-right [animation-duration:100s]"
         />
       </div>
     </motion.div>

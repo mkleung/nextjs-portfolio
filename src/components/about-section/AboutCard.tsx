@@ -38,18 +38,19 @@ export const AboutCard = () => {
     <motion.div
       initial={{
         opacity: 0,
-        y: 50,
+        y: 100,
       }}
       whileInView={{
         opacity: 1,
         y: 0,
         transition: {
-          duration: 1
+          duration: 1,
+  
         },
       }}
       viewport={{
         once: true,
-        margin: '-100px' 
+        margin: '-200px' 
       }}
       className="card card md:h-[340px] h-full md:col-span-2"
     >

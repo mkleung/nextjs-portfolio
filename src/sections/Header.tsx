@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export const Header = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   const scrollToSection = (id: string): void => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleScroll = () => {
-    const sections = ['home', 'about', 'projects', 'contact'];
+    const sections = ["home", "about", "projects", "contact"];
     const scrollPos = window.scrollY;
 
     sections.forEach((section) => {
@@ -29,9 +29,9 @@ export const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -41,14 +41,18 @@ export const Header = () => {
         <motion.div
           className="absolute h-full w-1/4 bg-white rounded-full opacity-15"
           style={{
-            left: activeSection === 'home' ? '0%' :
-                  activeSection === 'about' ? '25%' :
-                  activeSection === 'projects' ? '50%' :
-                  '75%',
+            left:
+              activeSection === "home"
+                ? "0%"
+                : activeSection === "about"
+                ? "25%"
+                : activeSection === "projects"
+                ? "50%"
+                : "75%",
           }}
           transition={{ duration: 0.5 }}
         />
-        {['home', 'about', 'projects', 'contact'].map((section) => (
+        {["home", "about", "projects", "contact"].map((section) => (
           <a
             key={section}
             href={`#${section}`}

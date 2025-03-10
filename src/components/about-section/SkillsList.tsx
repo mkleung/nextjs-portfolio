@@ -1,23 +1,25 @@
 import React, { Fragment } from "react";
-import { TechIcon } from "../TechIcon";
 import { twMerge } from "tailwind-merge";
 
-export const Skills = ({
-  items,
-  className,
+export type Skill = {
+  title: string;
+  icon: React.ReactNode;
+  type: "front" | "back";
+};
+
+// type SkillsProps = {
+//   skills: Skill[];
+// };
+
+const SkillsList = ({
+  skills,
   itemsWrapperClassName,
 }: {
-  items: { title: string; iconType: React.ElementType }[];
-  className?: string;
+  skills: Skill[];
   itemsWrapperClassName?: string;
 }) => {
   return (
-    <div
-      className={twMerge(
-        "flex [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)]",
-        className
-      )}
-    >
+    <div className="flex [mask-image:linear-gradient(to_right, transparent, black_10%, black_90%, transparent)]">
       <div
         className={twMerge(
           "flex flex-none p-0 gap-6 pr-6",
@@ -26,13 +28,13 @@ export const Skills = ({
       >
         {[...new Array(2)].fill(0).map((_, index) => (
           <Fragment key={index}>
-            {items.map((item) => (
+            {skills.map((skill, index) => (
               <div
-                key={item.title}
+                key={index}
                 className="inline-flex items-center gap-4 py-1.5 px-2.5 outline outline-2 outline-white/10 rounded-lg"
               >
-                <TechIcon component={item.iconType} />
-                <span className="font-semibold">{item.title}</span>
+                <span className="w-4 h-4">{skill.icon}</span>
+                <span className="font-semibold">{skill.title}</span>
               </div>
             ))}
           </Fragment>
@@ -41,3 +43,4 @@ export const Skills = ({
     </div>
   );
 };
+export default SkillsList;
