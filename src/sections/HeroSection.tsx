@@ -61,8 +61,8 @@ export const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
-                      duration: 2,
-                      delay: index ,
+                      duration: 0.5,
+                      delay: index/2 ,
                     }}
                     key={index}
                   >

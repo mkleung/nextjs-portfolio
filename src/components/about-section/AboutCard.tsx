@@ -5,40 +5,54 @@ import { motion } from "framer-motion";
 import { CardHeader } from "@/components/CardHeader";
 import { Card } from "@/components/Card";
 
-
-
 const hobbies = [
-    {
-      title: "Pixel Art",
-      emoji: '🎨',
-    },
-    {
-      title: "Pizza Making",
-      emoji: '🍕',
-    },
-    {
-      title: "Bollywood Movies",
-      emoji: '📺',
-    },
-    {
-      title: "Photography",
-      emoji: '📷',
-    },
-    {
-      title: "Language Learning",
-      emoji: '🌍',
-    },
-    {
-      title: "Biking",
-      emoji: '🚵‍♂️',
-    },
-  ];
+  {
+    title: "Pixel Art",
+    emoji: "🎨",
+  },
+  {
+    title: "Pizza Making",
+    emoji: "🍕",
+  },
+  {
+    title: "Bollywood Movies",
+    emoji: "📺",
+  },
+  {
+    title: "Photography",
+    emoji: "📷",
+  },
+  {
+    title: "Language Learning",
+    emoji: "🌍",
+  },
+  {
+    title: "Biking",
+    emoji: "🚵‍♂️",
+  },
+];
 
-export const AboutCard  = () => {
-    const constraintRef = useRef(null);
+export const AboutCard = () => {
+  const constraintRef = useRef(null);
   return (
-    <>
-      <Card className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2">
+    <motion.div
+      className="h-full lg:h-[340px] md:col-span-3 lg:col-span-2 card"
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
+
         <CardHeader title="About Me" className="" />
 
         <div className="flex flex-col p-6 md:py-8 md:px-10 md:pt-0 gap-4">
@@ -72,7 +86,7 @@ export const AboutCard  = () => {
             ))}
           </div>
         </div>
-      </Card>
-    </>
+     
+    </motion.div>
   );
 };

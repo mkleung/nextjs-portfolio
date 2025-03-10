@@ -9,6 +9,7 @@ import MovingCard from "./MovingCard";
 const ReadingCard = () => {
   return (
     <motion.div
+    className="card"
       initial={{
         opacity: 0,
         x: 50,
@@ -24,8 +25,7 @@ const ReadingCard = () => {
         once: true,
       }}
     >
-      {/* Book */}
-      <Card className="h-full lg:h-[340px] md:col-span-2 lg:col-span-1">
+
         <CardHeader title="Reading" />
 
         <div
@@ -34,7 +34,7 @@ const ReadingCard = () => {
         >
           <Image src={bookImage} alt="book cover"></Image>
         </div>
-      </Card>
+
     </motion.div>
   );
 };
