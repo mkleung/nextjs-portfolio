@@ -1,7 +1,7 @@
 import StarIcon from "@/assets/icons/star.svg";
 
 
-export const TapeSection = () => {
+export const Tape = () => {
   return (
     <div className="py-5 overflow-x-clip">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 ">

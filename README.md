@@ -25,6 +25,8 @@ alt + z
 
 - Icons:  https://heroicons.com/
 
+- SVG: https://deeditor.com/
+
 Links
 
 - https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/

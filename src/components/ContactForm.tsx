@@ -7,25 +7,23 @@ import {
   motion,
 } from "framer-motion";
 import StarIcon from "@/assets/icons/star.svg";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import { useFormData } from "herotofu-react";
 
-export const DragCloseDrawerExample = () => {
-  const [open, setOpen] = useState(false);
-    const { formState, getFormSubmitHandler } = useFormData(
-      "https://public.herotofu.com/v1/ee330890-566d-11ee-844c-3ff971b55902"
-    );
+
+interface ContactFormProps {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+
+
+export const ContactForm: React.FC<ContactFormProps> = ({ open, setOpen }) => {
+
+  const { formState, getFormSubmitHandler } = useFormData(
+    "https://public.herotofu.com/v1/ee330890-566d-11ee-844c-3ff971b55902"
+  );
   return (
     <>
-      <motion.button
-        onClick={() => setOpen(true)}
-        className=" text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-full gap-2 w-max border-gray-900"
-        whileTap={{ scale: 0.95 }}
-                whileHover={{ scale: 1.05 }}
-      >
-        Contact Me <ArrowUpRightIcon className="w-4 h-4" />
-      </motion.button>
-
       <DragCloseDrawer open={open} setOpen={setOpen}>
         <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
           <div className="inline-flex items-center gap-2">

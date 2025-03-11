@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(poppins.variable, work_sans.variable, "bg-gray-800 text-white antialiased font-sans")}>{children}</body>
+      <body className={twMerge(poppins.variable, work_sans.variable, "bg-gray-800 text-white antialiased font-sans caret-transparent")}>{children}</body>
     </html>
   );
 }

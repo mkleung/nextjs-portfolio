@@ -51,10 +51,6 @@ export const HeroSection = () => {
               , Front End Developer
             </motion.h1>
 
-            <div className="mt-5 flex justify-center">
-              <HoverButton />
-            </div>
-
             <p className="mt-5 text-center text-white/85 md:text-md">
               I specialize in converting innovative designs into dynamic,
               high-performance web applications that deliver exceptional user

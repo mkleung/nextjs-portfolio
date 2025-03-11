@@ -3,6 +3,7 @@ import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useRef, useEffect } from "react";
 import Slide from "./Slide";
+import { Tape } from "../Tape";
 
 const Parallax = () => {
   useEffect(() => {
@@ -21,21 +22,26 @@ const Parallax = () => {
   });
 
   return (
-    <div className="overflow-hidden">
+    <>
+    <Tape />
+        <div className="overflow-hidden">
       <div className="h-full" />
 
       <Slide
         direction={"left"}
-        left={"-10%"}
+        left={"-20%"}
         progress={scrollYProgress}
       />
       <Slide
         direction={"right"}
-        left={"-100%"}
+        left={"-120%"}
         progress={scrollYProgress}
       />
       <div className="h-full" />
     </div>
+    <Tape />
+    </>
+
   );
 };
 

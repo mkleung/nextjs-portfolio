@@ -49,9 +49,9 @@ export const AboutCard = () => {
       }}
       viewport={{
         once: true,
-        margin: "-200px",
+        margin: "-50px",
       }}
-      className="card card md:h-[340px] h-full md:col-span-2"
+      className="card h-full md:h-[340px] md:col-span-2"
       ref={constraintRef}
     >
       <CardHeader title="About Me" className="" />

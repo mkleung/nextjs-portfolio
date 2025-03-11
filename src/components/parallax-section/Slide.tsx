@@ -27,7 +27,8 @@ const Slide: React.FC<SlideProps> = ({ direction, progress, left }) => {
     'Animations',
     'Google Analytics',
     'Web Design',
-    'Testing'
+    'Responsive',
+    'Semantic HTML'
   ];
 
   return (

@@ -17,6 +17,7 @@ import MongoIcon from "@/assets/icons/mongodb.svg";
 import FlaskIcon from "@/assets/icons/flask.svg";
 import NodeIcon from "@/assets/icons/node.svg";
 import BootstrapIcon from "@/assets/icons/bootstrap.svg";
+import TypeIcon from "@/assets/icons/typescript.svg";
 import NextIcon from "@/assets/icons/next.svg";
 import SkillsList from "./SkillsList";
 
@@ -59,11 +60,6 @@ const EducationCard = () => {
       type: "front",
     },
     {
-      title: "Bootstrap",
-      icon: <BootstrapIcon />,
-      type: "front",
-    },
-    {
       title: "Laravel",
       icon: <LaravelIcon />,
       type: "back",
@@ -87,6 +83,11 @@ const EducationCard = () => {
       title: "MongoDB",
       icon: <MongoIcon />,
       type: "back",
+    },
+    {
+      title: "TypeScript",
+      icon: <TypeIcon />,
+      type: "front",
     },
   ];
 
