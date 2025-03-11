@@ -7,35 +7,37 @@ const HoverButton = () => {
   return (
     <>
       <div
-        className="hoverButtonContainer"
+        className="flex items-center justify-center relative cursor-pointer bg-[#111827] rounded-[24px] overflow-clip w-[160px] py-2.5"
         onMouseEnter={(e) => setIsHover(true)}
         onMouseLeave={(e) => setIsHover(false)}
       >
         <motion.div
-          className="circle"
+          className="w-1.5 h-1.5 bg-white rounded-full "
           animate={{
             scale: isHover ? 100 : 1,
-            backgroundColor: isHover ? "#0a00c1" : "#000",
+            backgroundColor: isHover ? "#FFF" : "#FFF",
+            x: isHover ? 0 : -12,
           }}
           transition={{
             ease: "easeIn",
-            duration: 0.2,
+            duration: 0.3,
           }}
-        ></motion.div>
+        >
+        </motion.div>
 
         {/* title */}
         <motion.div
-          className="title"
-          animate={{ x: isHover ? -8 : 8, color: isHover ? "#FFF" : "#000" }}
+          className="text-[15px] tracking-[-0.5px] z-[99] mr-2"
+          animate={{ color: isHover ? "#000" : "#FFF" }}
         >
-          <p>About Us</p>
+          <p>Contact Me</p>
         </motion.div>
 
         <motion.div
-          className="iconContainer"
+          className="flex items-center justify-center absolute right-1/4"
           animate={{ x: isHover ? 0 : 24, opacity: isHover ? 0 : 1 }}
         >
-          <ArrowRightIcon className="icon" />
+          <ArrowRightIcon className="w-4 h-4 stroke-2 text-white" />
         </motion.div>
       </div>
     </>

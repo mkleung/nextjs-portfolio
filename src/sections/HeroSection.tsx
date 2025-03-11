@@ -8,7 +8,6 @@ import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 import HoverButton from "@/components/HoverButton";
 
-
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -51,6 +50,10 @@ export const HeroSection = () => {
               </a>
               , Front End Developer
             </motion.h1>
+
+            <div className="mt-5 flex justify-center">
+              <HoverButton />
+            </div>
 
             <p className="mt-5 text-center text-white/85 md:text-md">
               I specialize in converting innovative designs into dynamic,
@@ -110,16 +113,12 @@ export const HeroSection = () => {
               <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
                 Get in touch
               </span>
-
             </motion.a>
 
             {/* <HoverButton /> */}
           </div>
         </div>
       </div>
-
-
-      
     </section>
   );
 };

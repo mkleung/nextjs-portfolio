@@ -3,6 +3,7 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { DragCloseDrawerExample } from "@/components/DragCloseDrawer";
+import HoverButton from "@/components/HoverButton";
 
 export const ContactSection = () => {
   return (
@@ -35,7 +36,8 @@ export const ContactSection = () => {
             </div>
 
             <div className="ml-5">
-              <DragCloseDrawerExample />
+              {/* <DragCloseDrawerExample /> */}
+              <HoverButton />
             </div>
           </div>
         </motion.div>

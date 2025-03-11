@@ -112,12 +112,11 @@ const EducationCard = () => {
       className="card card md:h-[340px] h-full md:col-span-2"
     >
       <CardHeader title="Education" className="" />
-      <div className="flex flex-col px-6 pt-0 pb-6 gap-5">
+      <div className="flex flex-col px-6 pt-0 pb-6 gap-5 md:px-10">
         <ul className="list-disc pl-5 text-white/85">
           <li>Data Science Graduate Certificate, Toronto Metropolitan U.</li>
           <li>Bachelor of Computer Science, Carleton University, Ottawa</li>
         </ul>
-
         <div className="inline-flex items-center gap-2">
           <StarIcon className="size-8 text-emerald-300"></StarIcon>
           <h3 className="font-serif text-xl gradient-underline">Skills</h3>

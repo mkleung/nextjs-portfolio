@@ -47,47 +47,45 @@
 
 /* Hover Button */
 
-.hoverButtonContainer {
+/* .hoverButton {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   cursor: pointer;
-  background-color: gray;
+  background-color: rgb(17, 24, 39);
   border-radius: 24px;
-  padding: 10px 30px;
-  width: 200px;
   overflow: clip;
-  width: 150px;
+  width: 160px;
+  padding: 10px 0;
 }
 
-.hoverButtonContainer .icon {
-  width: 16px;
-  height: 16px;
-  stroke-width: 2;
-  color: #fff;
-}
-
-.hoverButtonContainer .title {
-  font-size: 15px;
-  letter-spacing: -0.5px;
-  z-index: 999;
-
-}
-
-.hoverButtonContainer .circle {
+.hoverButton .circle {
   width: 6px;
   height: 6px;
   background-color: #FFF;
   border-radius: 50%;
   position: absolute;
-  left: 22px;
-}
+  left: 10%;
+} */
 
-.hoverButtonContainer .iconContainer {
+/* .hoverButton .title {
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  z-index: 999;
+} */
+
+/* .hoverButton .iconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 22px;
-}
+  right: 20%;
+} */
+
+/* .hoverButton .arrow {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  color: #FFF;
+} */
