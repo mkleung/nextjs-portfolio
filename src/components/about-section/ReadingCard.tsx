@@ -9,7 +9,7 @@ import MovingCard from "./MapCard";
 const ReadingCard = () => {
   return (
     <motion.div
-      className="card lg:h-[340px] h-full w-full md:col-span-1"
+      className="card md:h-[400px] lg:h-[340px]  h-full w-full md:col-span-1"
       initial={{
         opacity: 0,
         y: 100,

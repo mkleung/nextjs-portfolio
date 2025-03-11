@@ -51,7 +51,7 @@ export const AboutCard = () => {
         once: true,
         margin: "-50px",
       }}
-      className="card h-full md:col-span-2 md:h-[340px]"
+      className="card h-full md:col-span-2 md:h-[400px] lg:h-[340px]"
       ref={constraintRef}
     >
       <CardHeader title="About Me" className="" />
