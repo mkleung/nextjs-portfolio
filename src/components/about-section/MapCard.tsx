@@ -80,7 +80,7 @@ const handleMouseMove: MouseEventHandler = (e) => {
       x: -100,
       scale: 1 
     }}
-    animate={{ scale: isClicked ? 1.25 : 1 }}
+    animate={{ scale: isClicked ? 1.1 : 1 }}
     whileInView={{
       opacity: 1,
       x: 0,
@@ -95,7 +95,7 @@ const handleMouseMove: MouseEventHandler = (e) => {
       setIsClicked(!isClicked);
     }}>
       <motion.div
-        className="flex flex-col h-full  rounded-xl  shadow-lg overflow-hidden group hover:cursor-zoom-in"
+        className="flex flex-col h-full  rounded-3xl  shadow-lg overflow-hidden group hover:cursor-zoom-in"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
