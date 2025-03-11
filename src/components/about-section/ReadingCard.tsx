@@ -12,11 +12,11 @@ const ReadingCard = () => {
       className="card lg:h-[340px] h-full w-full md:col-span-1"
       initial={{
         opacity: 0,
-        x: 100,
+        y: 100,
       }}
       whileInView={{
         opacity: 1,
-        x: 0,
+        y: 0,
         transition: {
           duration: 1,
    
@@ -24,7 +24,7 @@ const ReadingCard = () => {
       }}
       viewport={{
         once: true,
-        margin: '-200px' 
+        margin: '-100px' 
       }}
     >
       <CardHeader title="Reading" />
