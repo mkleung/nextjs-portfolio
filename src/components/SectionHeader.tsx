@@ -17,11 +17,13 @@ export const SectionHeader = ({
         </p>
       </div>
 
-      {/* <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">
-        {title}
-      </h2> */}
+      <div className="max-sm:hidden">
+        <RevealText title="Recent&nbsp;Projects" />
+      </div>
 
-      <RevealText title="Recent&nbsp;Projects"/>
+      <h2 className="visible md:hidden font-serif text-3xl md:text-5xl text-center mt-6">
+        {title}
+      </h2>
 
       <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
         {description}

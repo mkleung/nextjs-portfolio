@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode, useState  } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import mapImage from "@/assets/images/ottawa.png";
@@ -11,6 +11,9 @@ const sheenSize = 500;
 
 
 const MapCard = () => {
+
+  const [isClicked, setIsClicked] = useState(false);
+
   const xPcnt = useSpring(0, { bounce: 0 });
   const yPcnt = useSpring(0, { bounce: 0 });
   const scale = useSpring(1, { bounce: 0 });
@@ -67,14 +70,17 @@ const handleMouseMove: MouseEventHandler = (e) => {
     scale.set(1);
     xPcnt.set(0);
     yPcnt.set(0);
+    setIsClicked(false);
   };
 
   return (
-    <motion.div className=" md:h-[340px] h-full w-full md:col-span-1"
+    <motion.div className=" lg:h-[340px] h-full w-full md:col-span-1 z-50"
     initial={{
       opacity: 0,
       x: -100,
+      scale: 1 
     }}
+    animate={{ scale: isClicked ? 1.25 : 1 }}
     whileInView={{
       opacity: 1,
       x: 0,
@@ -84,6 +90,9 @@ const handleMouseMove: MouseEventHandler = (e) => {
     }}
     viewport={{
       once: true,
+    }}
+    onClick={() => {
+      setIsClicked(!isClicked);
     }}>
       <motion.div
         className="flex flex-col h-full  rounded-xl  shadow-lg overflow-hidden group hover:cursor-zoom-in"

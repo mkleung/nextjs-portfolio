@@ -33,7 +33,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="py-32">
+    <section id="home" className="py-32 lg:py-40">
       <div className="container">
         <div className="flex flex-col items-center">
           <Image

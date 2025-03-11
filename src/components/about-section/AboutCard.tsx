@@ -51,7 +51,7 @@ export const AboutCard = () => {
         once: true,
         margin: "-50px",
       }}
-      className="card h-full md:h-[340px] md:col-span-2"
+      className="card h-full md:col-span-2 lg:h-[340px]"
       ref={constraintRef}
     >
       <CardHeader title="About Me" className="" />
@@ -77,7 +77,7 @@ export const AboutCard = () => {
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
               drag
-              dragConstraints={constraintRef}
+              dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             >
               <span className="relative inline-flex items-center px-5 py-1 transition-colors ease-in duration-200 bg-gray-700 dark:bg-gray-700 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
                 {hobby.title}

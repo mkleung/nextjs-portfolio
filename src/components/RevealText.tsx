@@ -1,18 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const RevealText = ({title}: {title:string}) => {
+export const RevealText = ({ title }: { title: string }) => {
   return (
-    <section className="grid place-content-center gap-2 px-8 py-5 text-white">
-      <FlipLink>{title}</FlipLink>
-    </section>
+    <>
+      <div className="grid place-content-center gap-2 px-8 py-5 text-white">
+        <FlipLink>{title}</FlipLink>
+      </div>
+    </>
   );
 };
 
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-const FlipLink = ({ children }: { children: string}) => {
+const FlipLink = ({ children }: { children: string }) => {
   return (
     <motion.div
       initial="initial"
