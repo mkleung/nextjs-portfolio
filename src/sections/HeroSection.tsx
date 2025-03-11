@@ -6,6 +6,8 @@ import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
+import HoverButton from "@/components/HoverButton";
+
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -108,10 +110,16 @@ export const HeroSection = () => {
               <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
                 Get in touch
               </span>
+
             </motion.a>
+
+            {/* <HoverButton /> */}
           </div>
         </div>
       </div>
+
+
+      
     </section>
   );
 };

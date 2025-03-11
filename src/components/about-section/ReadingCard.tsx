@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CardHeader } from "@/components/CardHeader";
 import { motion } from "framer-motion";
 import bookImage from "@/assets/images/deep.jpg";
-import MovingCard from "./MovingCard";
+import MovingCard from "./MapCard";
 
 const ReadingCard = () => {
   return (

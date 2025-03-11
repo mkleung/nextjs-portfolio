@@ -15,14 +15,15 @@ Open [http://localhost:3000](http://localhost:3000)
 
 Resources:
 
-- Cool browser
-https://polypane.app/
+- Cool browser: https://polypane.app/
 
 - Prettier Shortcut
 Shift + Alt + F
 
 - Word wrap classes (when classes get too long in tailwind)
 alt + z
+
+- Icons:  https://heroicons.com/
 
 Links
 

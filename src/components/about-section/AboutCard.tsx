@@ -45,12 +45,11 @@ export const AboutCard = () => {
         y: 0,
         transition: {
           duration: 1,
-  
         },
       }}
       viewport={{
         once: true,
-        margin: '-200px' 
+        margin: "-200px",
       }}
       className="card card md:h-[340px] h-full md:col-span-2"
     >
@@ -69,7 +68,7 @@ export const AboutCard = () => {
           <h3 className="font-serif text-xl gradient-underline">Hobbies</h3>
         </div>
 
-        <div className="h-full lg:h-[100px] mt-1" ref={constraintRef}>
+        <div className="h-full mt-1" ref={constraintRef}>
           {hobbies.map((hobby) => (
             <motion.div
               key={hobby.title}
