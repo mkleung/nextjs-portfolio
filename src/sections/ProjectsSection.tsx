@@ -90,7 +90,7 @@ export const ProjectsSection = () => {
               {/* Card Content */}
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-sky-400  to-emerald-400 inline-flex font-bold uppercase tracking-widest text-sm gap-2 text-transparent bg-clip-text">
                     <span>{project.company}</span>
                   </div>
 
@@ -110,7 +110,7 @@ export const ProjectsSection = () => {
                   <motion.a
                     href={project.link}
                     target="_blank"
-                    className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 mt-5"
+                    className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400 to-emerald-400 mt-5"
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.05 }}
                   >

@@ -65,7 +65,7 @@ export const AboutCard = () => {
         </p>
 
         <div className="inline-flex items-center gap-2">
-          <StarIcon className="size-8 text-emerald-300"></StarIcon>
+          <StarIcon className="size-8 text-emerald-400"></StarIcon>
           <h3 className="font-serif text-xl gradient-underline">Hobbies</h3>
         </div>
 
@@ -73,7 +73,7 @@ export const AboutCard = () => {
           {hobbies.map((hobby) => (
             <motion.div
               key={hobby.title}
-              className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 me-2 mb-2 hover:cursor-grab active:cursor-grabbing"
+              className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400  to-emerald-400  me-2 mb-2 hover:cursor-grab active:cursor-grabbing"
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
               drag

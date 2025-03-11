@@ -6,7 +6,6 @@ import StarIcon from "@/assets/icons/star.svg";
 import { motion } from "framer-motion";
 
 import JavascriptIcon from "@/assets/icons/square-js.svg";
-import CssIcon from "@/assets/icons/css3.svg";
 import FigmaIcon from "@/assets/icons/figma.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
@@ -16,7 +15,6 @@ import VueIcon from "@/assets/icons/vuejs.svg";
 import MongoIcon from "@/assets/icons/mongodb.svg";
 import FlaskIcon from "@/assets/icons/flask.svg";
 import NodeIcon from "@/assets/icons/node.svg";
-import BootstrapIcon from "@/assets/icons/bootstrap.svg";
 import TypeIcon from "@/assets/icons/typescript.svg";
 import NextIcon from "@/assets/icons/next.svg";
 import SkillsList from "./SkillsList";
@@ -110,7 +108,7 @@ const EducationCard = () => {
       viewport={{
         once: true,
       }}
-      className="card md:h-[400px] lg:h-[340px] h-full md:col-span-2"
+      className="card sm:h-[420px] md:h-[400px] lg:h-[340px]  md:col-span-2"
     >
       <CardHeader title="Education" className="" />
       <div className="flex flex-col px-6 pt-0 pb-6 gap-5 md:px-10">
@@ -119,7 +117,7 @@ const EducationCard = () => {
           <li>Bachelor of Computer Science, Carleton University, Ottawa</li>
         </ul>
         <div className="inline-flex items-center gap-2">
-          <StarIcon className="size-8 text-emerald-300"></StarIcon>
+          <StarIcon className="size-8 text-emerald-400"></StarIcon>
           <h3 className="font-serif text-xl gradient-underline">Skills</h3>
         </div>
       </div>

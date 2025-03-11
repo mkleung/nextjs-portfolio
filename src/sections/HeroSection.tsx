@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
-import logo from "@/assets/images/mike.jpeg";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
-import HoverButton from "@/components/HoverButton";
+import Portrait from "@/components/Portrait";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -35,12 +33,14 @@ export const HeroSection = () => {
   return (
     <section id="home" className="py-32 lg:py-40">
       <div className="container">
+
         <div className="flex flex-col items-center">
-          <Image
+          {/* <Image
             src={logo}
             className="w-24 h-24 rounded-full" // Updated size class
             alt="Person peeking from behind laptop"
-          />
+          /> */}
+          <Portrait />
 
           <div className="max-w-2xl mx-auto">
             <motion.h1 className="font-serif text-3xl text-center mt-8">
@@ -98,7 +98,7 @@ export const HeroSection = () => {
 
             <motion.a
               href="#contact"
-              className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300"
+              className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400 to-emerald-400 "
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("contact");

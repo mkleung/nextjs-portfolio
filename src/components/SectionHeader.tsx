@@ -17,12 +17,13 @@ export const SectionHeader = ({
         </p>
       </div>
 
-      <div className="max-sm:hidden">
+      <div className="max-md:hidden">
         <RevealText title="Recent&nbsp;Projects" />
       </div>
 
       <h2 className="visible md:hidden font-serif text-3xl md:text-5xl text-center mt-6">
         {title}
+        test
       </h2>
 
       <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">

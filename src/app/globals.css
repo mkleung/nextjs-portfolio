@@ -21,14 +21,17 @@
 /* Custom Styles */
 
 .gradient-border {
-  /* border: 4px solid transparent; */
   border-image: linear-gradient(
       to right,
-      theme("colors.emerald.300"),
-      theme("colors.sky.400")
+      #34d399, /* Emerald color */
+      #0ea5e9  /* Sky color */
     )
     1;
 }
+/* 
+to-emerald-400
+from-sky-400 
+*/
 
 .gradient-underline {
   position: relative;
@@ -45,47 +48,51 @@
   z-index: -10;
 }
 
-/* Hover Button */
-
-/* .hoverButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Portrait */
+.circle {
   position: relative;
-  cursor: pointer;
-  background-color: rgb(17, 24, 39);
-  border-radius: 24px;
-  overflow: clip;
-  width: 160px;
-  padding: 10px 0;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  /* outline: 30px solid rgba(0, 0, 0, 0.35); */
+  outline-offset: -12px;
 }
 
-.hoverButton .circle {
-  width: 6px;
-  height: 6px;
-  background-color: #FFF;
-  border-radius: 50%;
+.circle img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: inherit;
+}
+
+.circle::before,
+.circle::after {
   position: absolute;
-  left: 10%;
-} */
+  z-index: -1;
+  content: "";
+  inset: -4px;
+  border-radius: inherit;
+  background-image: conic-gradient(#0ea5e9, #34d399, #0ea5e9);
+  animation: rotate 3s linear infinite;
+}
 
-/* .hoverButton .title {
-  font-size: 15px;
-  letter-spacing: -0.5px;
-  z-index: 999;
-} */
+.circle::after {
+  filter: blur(1rem);
+  opacity: 0.6;
+}
 
-/* .hoverButton .iconContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 20%;
-} */
+.circle:hover::before,
+.circle:hover::after {
+  animation-play-state: paused;
+}
 
-/* .hoverButton .arrow {
-  width: 16px;
-  height: 16px;
-  stroke-width: 2;
-  color: #FFF;
-} */
+@keyframes rotate {
+  /* from {
+    rotate: 0deg;
+  } */
+  to {
+    rotate: 360deg;
+  }
+}

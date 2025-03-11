@@ -74,7 +74,7 @@ const handleMouseMove: MouseEventHandler = (e) => {
   };
 
   return (
-    <motion.div className=" md:h-[400px] lg:h-[340px] h-full w-full md:col-span-1 z-50"
+    <motion.div className=" md:h-[400px] lg:h-[340px] h-full w-full md:col-span-1 z-10"
     initial={{
       opacity: 0,
       x: -100,
