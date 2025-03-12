@@ -7,10 +7,6 @@ export type Skill = {
   type: "front" | "back";
 };
 
-// type SkillsProps = {
-//   skills: Skill[];
-// };
-
 const SkillsList = ({
   skills,
   itemsWrapperClassName,

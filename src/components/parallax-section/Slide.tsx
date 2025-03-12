@@ -23,12 +23,12 @@ const Slide: React.FC<SlideProps> = ({ direction, progress, left }) => {
     "SEO Optimized",
     "UI/UX",
     "Fast Loading",
-    'Full-stack Development',
-    'Animations',
-    'Google Analytics',
-    'Web Design',
-    'Responsive',
-    'Semantic HTML'
+    "Full-stack Development",
+    "Animations",
+    "Google Analytics",
+    "Web Design",
+    "Responsive",
+    "Semantic HTML",
   ];
 
   return (

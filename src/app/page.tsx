@@ -1,13 +1,10 @@
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/HeroSection";
 import { ProjectsSection } from "@/sections/ProjectsSection";
-import { Tape } from "@/components/Tape";
-import { TestimonialsSection } from "@/sections/TestimonialSection";
 import { AboutSection } from "@/sections/AboutSection";
 import { ContactSection } from "@/sections/ContactSection";
 import { Footer } from "@/sections/Footer";
 import Parallax from "@/components/parallax-section/Parallax";
-
 
 export default function Home() {
   return (
@@ -16,9 +13,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-
       <Parallax />
-
       {/* <TestimonialsSection /> */}
       <ContactSection />
       <Footer />

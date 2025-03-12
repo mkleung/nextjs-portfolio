@@ -9,16 +9,12 @@ import {
 import StarIcon from "@/assets/icons/star.svg";
 import { useFormData } from "herotofu-react";
 
-
 interface ContactFormProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-
-
 export const ContactForm: React.FC<ContactFormProps> = ({ open, setOpen }) => {
-
   const { formState, getFormSubmitHandler } = useFormData(
     "https://public.herotofu.com/v1/ee330890-566d-11ee-844c-3ff971b55902"
   );

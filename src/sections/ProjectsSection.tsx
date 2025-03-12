@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 import kanata from "@/assets/images/kanata.png";
 import meal from "@/assets/images/meal.png";
@@ -24,7 +24,8 @@ const portfolioProjects = [
           "Improved site speed by 50% and successfully completed an accessibility audit.",
       },
       {
-        title: "Migrated the site from Elementor to Gutenberg Blocks and Advanced Custom Fields (ACFs).",
+        title:
+          "Migrated the site from Elementor to Gutenberg Blocks and Advanced Custom Fields (ACFs).",
       },
     ],
     link: "https://kanataseniors.ca",
@@ -100,7 +101,10 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-t">
                     {project.results.map((result, index) => (
-                      <li key={index} className="flex gap-2 text-sm md:text-sm text-white/85">
+                      <li
+                        key={index}
+                        className="flex gap-2 text-sm md:text-sm text-white/85"
+                      >
                         <CheckCircleIcon className="w-6 h-6" />
                         <span>{result.title}</span>
                       </li>
@@ -114,8 +118,8 @@ export const ProjectsSection = () => {
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <div className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                      Visit Website 
+                    <div className="flex  px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:text-black">
+                      Visit Website <ArrowRightIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
                     </div>
                   </motion.a>
                 </div>

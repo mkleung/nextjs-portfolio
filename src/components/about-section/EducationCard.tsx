@@ -1,9 +1,7 @@
 import React from "react";
-import { Card } from "../Card";
 import { CardHeader } from "../CardHeader";
-import StarIcon from "@/assets/icons/star.svg";
-
 import { motion } from "framer-motion";
+import StarIcon from "@/assets/icons/star.svg";
 
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import FigmaIcon from "@/assets/icons/figma.svg";

@@ -15,7 +15,7 @@ const Parallax = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  const container = useRef<HTMLDivElement>(null); 
+  const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -23,25 +23,16 @@ const Parallax = () => {
 
   return (
     <>
-    <Tape />
-        <div className="overflow-hidden">
-      <div className="h-full" />
+      <Tape />
+      <div className="overflow-hidden">
+        <div className="h-full" />
 
-      <Slide
-        direction={"left"}
-        left={"-20%"}
-        progress={scrollYProgress}
-      />
-      <Slide
-        direction={"right"}
-        left={"-120%"}
-        progress={scrollYProgress}
-      />
-      <div className="h-full" />
-    </div>
-    <Tape />
+        <Slide direction={"left"} left={"-20%"} progress={scrollYProgress} />
+        <Slide direction={"right"} left={"-120%"} progress={scrollYProgress} />
+        <div className="h-full" />
+      </div>
+      <Tape />
     </>
-
   );
 };
 

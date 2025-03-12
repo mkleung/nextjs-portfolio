@@ -8,13 +8,13 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const ContactSection = () => {
   const [isHover, setIsHover] = useState(false);
-  const [open, setOpen] = useState<boolean>(false); 
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
         <motion.div
-          className="bg-gradient-to-r gradient text-gray-900 py-8 px-10 rounded-3xl text-center relative"
+          className="gradient text-gray-900 py-8 px-10 rounded-3xl text-center relative"
           initial={{
             opacity: 0,
           }}
@@ -40,19 +40,19 @@ export const ContactSection = () => {
             </div>
 
             <div className="ml-5">
-              
               {/* Contact Me button */}
               <button
-                className="flex items-center justify-center relative cursor-pointer bg-[#111827] rounded-[24px] overflow-clip w-[160px] py-2.5"
+                className="flex items-center justify-center relative cursor-pointer bg-gray-800 rounded-[24px] overflow-clip w-[160px] py-2.5"
                 onMouseEnter={(e) => setIsHover(true)}
                 onMouseLeave={(e) => setIsHover(false)}
                 onClick={() => setOpen(true)}
               >
+                {/* Dot */}
                 <motion.div
                   className="w-1.5 h-1.5 bg-white rounded-full "
                   animate={{
                     scale: isHover ? 100 : 1,
-                    backgroundColor: isHover ? "#FFF" : "#FFF",
+
                     x: isHover ? 0 : -12,
                   }}
                   transition={{

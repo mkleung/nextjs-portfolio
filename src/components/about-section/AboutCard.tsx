@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import StarIcon from "@/assets/icons/star.svg";
 import { motion } from "framer-motion";
 import { CardHeader } from "@/components/CardHeader";
-import { Card } from "@/components/Card";
 
 const hobbies = [
   {

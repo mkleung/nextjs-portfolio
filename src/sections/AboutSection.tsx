@@ -1,11 +1,9 @@
 "use client";
-import { useRef } from "react";
 
 import ReadingCard from "@/components/about-section/ReadingCard";
 import { AboutCard } from "@/components/about-section/AboutCard";
 import EducationCard from "@/components/about-section/EducationCard";
 import MapCard from "@/components/about-section/MapCard";
-
 
 export const AboutSection = () => {
   return (

@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 import Portrait from "@/components/Portrait";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
+import { ArrowDownIcon } from "@heroicons/react/16/solid";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],
@@ -33,7 +34,6 @@ export const HeroSection = () => {
   return (
     <section id="home" className="py-32 lg:py-40">
       <div className="container">
-
         <div className="flex flex-col items-center">
           <Portrait />
           <div className="max-w-2xl mx-auto">
@@ -87,7 +87,6 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <span className="font-semibold">Explore My Work</span>
-              <ArrowDown className="w-4 h-4" />
             </motion.a>
 
             <motion.a
@@ -100,8 +99,8 @@ export const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.05 }}
             >
-              <span className="relative px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 dark:bg-gray-900 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                Get in touch
+              <span className="flex px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
+                Get in touch <ArrowDownIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
               </span>
             </motion.a>
 
