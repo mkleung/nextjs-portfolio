@@ -35,13 +35,7 @@ export const HeroSection = () => {
       <div className="container">
 
         <div className="flex flex-col items-center">
-          {/* <Image
-            src={logo}
-            className="w-24 h-24 rounded-full" // Updated size class
-            alt="Person peeking from behind laptop"
-          /> */}
           <Portrait />
-
           <div className="max-w-2xl mx-auto">
             <motion.h1 className="font-serif text-3xl text-center mt-8">
               Hi I&apos;m{" "}
@@ -98,7 +92,7 @@ export const HeroSection = () => {
 
             <motion.a
               href="#contact"
-              className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400 to-emerald-400 "
+              className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br gradient "
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("contact");

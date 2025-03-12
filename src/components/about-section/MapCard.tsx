@@ -1,7 +1,7 @@
 import React, { MouseEventHandler, ReactNode, useState  } from "react";
 import Image from "next/image";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import mapImage from "@/assets/images/ottawa.png";
+import mapImage from "@/assets/images/ottawa6.png";
 import smileMemoji from "@/assets/images/mike.webp";
 
 const cardRotation = 10;

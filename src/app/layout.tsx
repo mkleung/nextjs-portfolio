@@ -19,7 +19,7 @@ const work_sans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Michael Leung - Front End Developer",
-  description: "Created with the help of Frontend Tribe",
+  description: "Michael Leung is a skilled Front End Developer specializing in creating dynamic and responsive web applications. Explore my portfolio to see my latest projects and discover how I can help bring your ideas to life",
 };
 
 export default function RootLayout({

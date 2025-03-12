@@ -27,6 +27,8 @@ alt + z
 
 - SVG: https://deeditor.com/
 
+- Maps https://snazzymaps.com/style/13/neutral-blue
+
 Links
 
 - https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   .nav-item {
     @apply px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
@@ -20,11 +21,22 @@
 
 /* Custom Styles */
 
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+
+.gradient {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+
 .gradient-border {
   border-image: linear-gradient(
       to right,
-      #34d399, /* Emerald color */
-      #0ea5e9  /* Sky color */
+      var(--secondary-color), 
+      var(--primary-color)  
     )
     1;
 }
@@ -43,7 +55,7 @@ from-sky-400
   bottom: 0px;
   height: 4px;
   width: 100%;
-  background: linear-gradient(to right, #34d399, #0ea5e9);
+  background: linear-gradient(to right,  var(--secondary-color), var(--primary-color));
   border-radius: 3px;
   z-index: -10;
 }
@@ -74,7 +86,7 @@ from-sky-400
   content: "";
   inset: -4px;
   border-radius: inherit;
-  background-image: conic-gradient(#0ea5e9, #34d399, #0ea5e9);
+  background-image: conic-gradient(var(--primary-color),  var(--secondary-color), var(--primary-color));
   animation: rotate 3s linear infinite;
 }
 

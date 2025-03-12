@@ -12,26 +12,26 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Community Initiative",
+    company: "2024-2025",
     title: "Kanata Seniors Council",
     results: [
       {
         title:
-          "Developed a modern and user-friendly WordPress site that is fully responsive",
+          "Crafted wireframes and detailed mockups in Figma to enhance user interface design.",
       },
       {
         title:
-          "Improved site speed by 50% and successfully passed an accessibility audit",
+          "Improved site speed by 50% and successfully completed an accessibility audit.",
       },
       {
-        title: "Migrated the site from Elementor to Gutenberg Blocks and ACFs",
+        title: "Migrated the site from Elementor to Gutenberg Blocks and Advanced Custom Fields (ACFs).",
       },
     ],
     link: "https://kanataseniors.ca",
     image: kanata,
   },
   {
-    company: "Online Course",
+    company: "2023",
     title: "JWFoods - The Meal Butler",
     results: [
       {
@@ -58,7 +58,7 @@ export const ProjectsSection = () => {
       <div className="container">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Recent Projects"
+          title="Recent Websites"
           description=""
         />
 
@@ -110,7 +110,7 @@ export const ProjectsSection = () => {
                   <motion.a
                     href={project.link}
                     target="_blank"
-                    className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400 to-emerald-400 mt-5"
+                    className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br gradient mt-5"
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.05 }}
                   >
