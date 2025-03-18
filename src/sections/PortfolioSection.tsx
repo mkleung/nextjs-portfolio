@@ -1,14 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-
 import kanata from "@/assets/images/kanata.png";
 import meal from "@/assets/images/meal.png";
-
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
+import { CardHeader } from "@/components/CardHeader";
 
 const portfolioProjects = [
   {
@@ -53,15 +51,13 @@ const portfolioProjects = [
   },
 ];
 
-export const ProjectsSection = () => {
+export const PortfolioSection = () => {
   return (
-    <section id="projects" className="py-16 lg:py-24">
+    <section id="portfolio" className="py-16 lg:py-10">
       <div className="container">
-        <SectionHeader
-          eyebrow="Portfolio"
-          title="Recent Websites"
-          description=""
-        />
+        <div className="flex justify-center">
+          <CardHeader title="Portfolio" />
+        </div>
 
         {/* Card Wrapper */}
         <motion.div
@@ -119,7 +115,8 @@ export const ProjectsSection = () => {
                     whileHover={{ scale: 1.05 }}
                   >
                     <div className="flex  px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:text-black">
-                      Visit Website <ArrowRightIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
+                      Visit Website{" "}
+                      <ArrowRightIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
                     </div>
                   </motion.a>
                 </div>

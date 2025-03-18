@@ -5,30 +5,38 @@ import { motion } from "framer-motion";
 import { CardHeader } from "@/components/CardHeader";
 
 const hobbies = [
+
+
   {
-    title: "Pixel Art",
-    emoji: "🎨",
+    title: "Foreign Languages",
+    emoji: "🌍",
   },
   {
-    title: "Pizza Making",
-    emoji: "🍕",
-  },
-  {
-    title: "Bollywood Movies",
+    title: "Watching Movies",
     emoji: "📺",
+  },
+
+  {
+    title: "Improv",
+    emoji: "🎭",
+  },
+  {
+    title: "Art",
+    emoji: "🎨",
   },
   {
     title: "Photography",
     emoji: "📷",
   },
   {
-    title: "Language Learning",
-    emoji: "🌍",
-  },
-  {
-    title: "Biking",
+    title: "Cycling",
     emoji: "🚵‍♂️",
   },
+  {
+    title: "Cooking",
+    emoji: "🍕",
+  },
+
 ];
 
 export const AboutCard = () => {

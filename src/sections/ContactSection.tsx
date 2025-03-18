@@ -2,17 +2,26 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
+import ArrowRight from "@/assets/icons/arrow-right.svg";
+import { Homemade_Apple } from "next/font/google";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { ContactForm } from "@/components/ContactForm";
+
+const cursive_script = Homemade_Apple({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: "400",
+});
+
+const subtitle = "Design Develop Deliver".split(" ");
 
 export const ContactSection = () => {
   const [isHover, setIsHover] = useState(false);
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
-      <div className="container">
+    <section id="contact" className="py-10 lg:py-10 lg:pt-10">
+      <div className="container mt-10">
         <motion.div
           className="gradient text-gray-900 py-8 px-10 rounded-3xl text-center relative"
           initial={{
@@ -26,6 +35,7 @@ export const ContactSection = () => {
           }}
           viewport={{
             amount: "all",
+            once: true,
           }}
         >
           <div className="flex flex-col gap-8  md:gap-16 items-center md:flex-row md:text-left w-full">
@@ -52,7 +62,6 @@ export const ContactSection = () => {
                   className="w-1.5 h-1.5 bg-white rounded-full "
                   animate={{
                     scale: isHover ? 100 : 1,
-
                     x: isHover ? 0 : -12,
                   }}
                   transition={{
@@ -76,11 +85,35 @@ export const ContactSection = () => {
                   <ArrowRightIcon className="w-4 h-4 stroke-2 text-white" />
                 </motion.div>
               </button>
-
               <ContactForm open={open} setOpen={setOpen} />
             </div>
           </div>
         </motion.div>
+      </div>
+
+      <div className="container py-10">
+        <div className="mt-5 text-center text-white/85 md:text-2xl flex justify-center items-center">
+          <p className={cursive_script.className}>
+            {subtitle.map((element, index) => (
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index / 2,
+                }}
+                key={index}
+              >
+                {element}{" "}
+                {index != subtitle.length - 1 && (
+                  <span className="mx-2">
+                    <ArrowRight className="w-10 h-10 inline mr-2" />
+                  </span>
+                )}
+              </motion.span>
+            ))}
+          </p>
+        </div>
       </div>
     </section>
   );

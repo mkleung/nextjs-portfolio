@@ -22,7 +22,7 @@ const Parallax = () => {
   });
 
   return (
-    <>
+    <div className="mt-10">
       <Tape />
       <div className="overflow-hidden">
         <div className="h-full" />
@@ -32,7 +32,7 @@ const Parallax = () => {
         <div className="h-full" />
       </div>
       <Tape />
-    </>
+    </div>
   );
 };
 

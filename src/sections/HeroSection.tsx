@@ -1,17 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import ArrowRight from "@/assets/icons/arrow-right.svg";
-import { Homemade_Apple } from "next/font/google";
 import { motion } from "framer-motion";
 import Portrait from "@/components/Portrait";
-import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
-
-const cursive_script = Homemade_Apple({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: "400",
-});
+import { RevealText } from "@/components/RevealText";
 
 export const HeroSection = () => {
   const scrollToSection = (id: string): void => {
@@ -20,8 +12,6 @@ export const HeroSection = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const subtitle = "Design Develop Deliver".split(" ");
 
   const [href, setHref] = useState("");
 
@@ -34,45 +24,37 @@ export const HeroSection = () => {
   return (
     <section id="home" className="py-32 lg:py-40">
       <div className="container">
-        <div className="flex flex-col items-center">
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
           <Portrait />
           <div className="max-w-2xl mx-auto">
-            <motion.h1 className="font-serif text-3xl text-center mt-8">
-              Hi I&apos;m{" "}
-              <a href={href} className="gradient-underline">
-                Michael Leung
-              </a>
-              , Front End Developer
-            </motion.h1>
+            <h1 className="font-serif text-5xl text-center mt-8 flex flex-col md:flex-row">
+              <span className=" md:pt-1.5">Hello I&apos;m</span>
+              <span className="max-md:hidden">
+                <RevealText
+                  name="Michael&nbsp;Leung"
+                  title="Web&nbsp;Architect"
+                />
+              </span>
 
-            <p className="mt-5 text-center text-white/85 md:text-md">
-              I specialize in converting innovative designs into dynamic,
-              high-performance web applications that deliver exceptional user
-              experiences.
+              <span className="visible md:hidden">Michael Leung</span>
+            </h1>
+            <p className="text-center text-white/85 md:text-md mt-5">
+              I am a web developer who loves to create beautiful things.
             </p>
-
-            <div className="mt-5 text-center text-white/85 md:text-2xl flex justify-center items-center">
-              <p className={cursive_script.className}>
-                {subtitle.map((element, index) => (
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index / 2,
-                    }}
-                    key={index}
-                  >
-                    {element}{" "}
-                    {index != subtitle.length - 1 && (
-                      <span className="mx-2">
-                        <ArrowRight className="w-10 h-10 inline mr-2" />
-                      </span>
-                    )}
-                  </motion.span>
-                ))}
-              </p>
-            </div>
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-center mt-5">
@@ -100,13 +82,14 @@ export const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
             >
               <span className="flex px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                Get in touch <ArrowDownIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
+                Get in touch{" "}
+                <ArrowDownIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
               </span>
             </motion.a>
 
             {/* <HoverButton /> */}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   const handleScroll = () => {
-    const sections = ["home", "about", "projects", "contact"];
+    const sections = ["home", "about", "portfolio", "contact"];
     const scrollPos = window.scrollY;
 
     sections.forEach((section) => {
@@ -36,7 +36,23 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-50">
+    <motion.div
+      className="flex justify-center items-center fixed top-3 w-full z-50"
+      initial={{
+        opacity: 0,
+        y: -20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <nav className="relative flex gap-1 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <motion.div
           className="absolute h-full w-1/4 bg-white rounded-full opacity-15"
@@ -46,13 +62,13 @@ export const Header = () => {
                 ? "0%"
                 : activeSection === "about"
                 ? "25%"
-                : activeSection === "projects"
+                : activeSection === "portfolio"
                 ? "50%"
                 : "75%",
           }}
           transition={{ duration: 0.5 }}
         />
-        {["home", "about", "projects", "contact"].map((section) => (
+        {["home", "about", "portfolio", "contact"].map((section) => (
           <a
             key={section}
             href={`#${section}`}
@@ -66,6 +82,6 @@ export const Header = () => {
           </a>
         ))}
       </nav>
-    </div>
+    </motion.div>
   );
 };
