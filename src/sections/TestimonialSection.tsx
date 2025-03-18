@@ -3,7 +3,6 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 import { Card } from "@/components/Card";
 
@@ -19,11 +18,6 @@ export const TestimonialsSection = () => {
   return (
     <div className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader
-          eyebrow="Testimonials"
-          title="What do clients say about me!"
-          description=""
-        />
 
         <div className="mt-16 lg:mt-24 flex justify-center items-center overflow-hidden [mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent)]">
           <div className="flex flex-none gap-8 ">
