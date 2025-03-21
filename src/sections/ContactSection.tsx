@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ArrowRight from "@/assets/icons/arrow-right.svg";
 import { Homemade_Apple } from "next/font/google";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import { ContactForm } from "@/components/ContactForm";
@@ -107,7 +106,7 @@ export const ContactSection = () => {
                 {element}{" "}
                 {index != subtitle.length - 1 && (
                   <span className="mx-2">
-                    <ArrowRight className="w-10 h-10 inline mr-2" />
+                    <ArrowRightIcon className="w-10 h-10 inline mr-2" />
                   </span>
                 )}
               </motion.span>

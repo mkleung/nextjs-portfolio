@@ -57,37 +57,23 @@ export const HeroSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center md:flex-row justify-center mt-5">
-            <motion.a
-              href="#projects"
-              className="inline-flex items-center gap-2 border-white/10 px-6 h-12 rounded-xl"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("projects");
-              }}
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <span className="font-semibold">Explore My Work</span>
-            </motion.a>
+          <div className="flex flex-col items-center md:flex-row justify-center mt-5 pt-5">
+
 
             <motion.a
               href="#contact"
               className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br gradient "
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("contact");
+                scrollToSection("portfolio");
               }}
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
             >
               <span className="flex px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:dark:bg-transparent group-hover:text-black">
-                Get in touch{" "}
+                View Portfolio{" "}
                 <ArrowDownIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
               </span>
             </motion.a>
 
-            {/* <HoverButton /> */}
           </div>
         </motion.div>
       </div>

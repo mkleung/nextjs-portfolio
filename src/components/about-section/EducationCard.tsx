@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CardHeader } from "../CardHeader";
 import { motion } from "framer-motion";
 import StarIcon from "@/assets/icons/star.svg";
@@ -12,10 +12,11 @@ import LaravelIcon from "@/assets/icons/laravel.svg";
 import VueIcon from "@/assets/icons/vuejs.svg";
 import MongoIcon from "@/assets/icons/mongodb.svg";
 import FlaskIcon from "@/assets/icons/flask.svg";
+import DockerIcon from "@/assets/icons/docker.svg";
 import NodeIcon from "@/assets/icons/node.svg";
 import TypeIcon from "@/assets/icons/typescript.svg";
 import NextIcon from "@/assets/icons/next.svg";
-import SkillsList from "./SkillsList";
+import SkillsList from "../SkillsList";
 
 type Skill = {
   title: string;
@@ -25,11 +26,6 @@ type Skill = {
 
 const EducationCard = () => {
   const skills: Skill[] = [
-    {
-      title: "NextJs",
-      icon: <NextIcon />,
-      type: "back",
-    },
     {
       title: "React",
       icon: <ReactIcon />,
@@ -56,6 +52,11 @@ const EducationCard = () => {
       type: "front",
     },
     {
+      title: "TypeScript",
+      icon: <TypeIcon />,
+      type: "front",
+    },
+    {
       title: "Laravel",
       icon: <LaravelIcon />,
       type: "back",
@@ -71,6 +72,11 @@ const EducationCard = () => {
       type: "back",
     },
     {
+      title: "Docker",
+      icon: <DockerIcon />,
+      type: "back",
+    },
+    {
       title: "NextJs",
       icon: <NodeIcon />,
       type: "back",
@@ -79,11 +85,6 @@ const EducationCard = () => {
       title: "MongoDB",
       icon: <MongoIcon />,
       type: "back",
-    },
-    {
-      title: "TypeScript",
-      icon: <TypeIcon />,
-      type: "front",
     },
   ];
 
@@ -120,14 +121,16 @@ const EducationCard = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
+      <div
+        className="flex flex-col gap-5"
+      >
         <SkillsList
           skills={frontSkills}
-          itemsWrapperClassName="animate-move-left [animation-duration:100s] hover:animate-none"
+          itemsWrapperClassName="animate-move-left [animation-duration:40s]"
         />
         <SkillsList
           skills={backSkills}
-          itemsWrapperClassName="animate-move-right [animation-duration:100s] hover:animate-none"
+          itemsWrapperClassName="animate-move-right [animation-duration:40s]"
         />
       </div>
     </motion.div>

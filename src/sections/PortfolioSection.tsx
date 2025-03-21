@@ -111,8 +111,6 @@ export const PortfolioSection = () => {
                     href={project.link}
                     target="_blank"
                     className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br gradient mt-5"
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{ scale: 1.05 }}
                   >
                     <div className="flex  px-5 py-1 transition-colors ease-in duration-200 bg-gray-800 rounded-full group-hover:bg-transparent group-hover:text-black">
                       Visit Website{" "}

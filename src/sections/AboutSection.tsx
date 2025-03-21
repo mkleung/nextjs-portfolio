@@ -7,8 +7,10 @@ import MapCard from "@/components/about-section/MapCard";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-10">
+    <section id="about" className="pb-5">
       <div className="container">
+
+
         <div className="mt-10 flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <MapCard />

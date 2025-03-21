@@ -9,12 +9,12 @@ const footerLinks = [
     url: "https://www.instagram.com/morningmike/",
   },
   {
-    title: "Github",
-    url: "https://github.com/mkleung",
+    title: "Linkedin",
+    url: "https://www.linkedin.com/in/leungpak/",
   },
   {
-    title: "Twitter",
-    url: "https://x.com/mikelottawa",
+    title: "Github",
+    url: "https://github.com/mkleung",
   },
 ];
 

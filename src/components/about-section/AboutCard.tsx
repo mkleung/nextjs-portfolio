@@ -81,8 +81,6 @@ export const AboutCard = () => {
             <motion.div
               key={hobby.title}
               className="hover:pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br from-sky-400  to-emerald-400  me-2 mb-2 hover:cursor-grab active:cursor-grabbing"
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
               drag
               dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             >
