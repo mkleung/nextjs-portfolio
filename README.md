@@ -31,6 +31,8 @@ alt + z
 
 Links
 
+- Creating blog https://www.youtube.com/watch?v=ahX4mVgM8AE
+
 - https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/
 
 - https://www.aceternity.com/components

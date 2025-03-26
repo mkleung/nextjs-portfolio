@@ -126,11 +126,11 @@ const EducationCard = () => {
       >
         <SkillsList
           skills={frontSkills}
-          itemsWrapperClassName="animate-move-left [animation-duration:40s]"
+          itemsWrapperClassName="animate-move-left [animation-duration:100s]"
         />
         <SkillsList
           skills={backSkills}
-          itemsWrapperClassName="animate-move-right [animation-duration:40s]"
+          itemsWrapperClassName="animate-move-right [animation-duration:100s]"
         />
       </div>
     </motion.div>

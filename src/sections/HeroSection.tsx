@@ -52,14 +52,16 @@ export const HeroSection = () => {
 
               <span className="visible md:hidden">Michael Leung</span>
             </h1>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
             <p className="text-center text-white/85 md:text-md mt-5">
-              I am a web developer who loves to create beautiful things.
+              I live in Ottawa, the stunning capital of Canada, where I assist
+              organizations in standing out with beautifully designed websites
             </p>
           </div>
 
           <div className="flex flex-col items-center md:flex-row justify-center mt-5 pt-5">
-
-
             <motion.a
               href="#contact"
               className="hover:cursor-pointer relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-full group bg-gradient-to-br gradient "
@@ -73,7 +75,6 @@ export const HeroSection = () => {
                 <ArrowDownIcon className="w-4 h-4 stroke-2 text-white mt-0.5 ml-1 group-hover:text-black transition-colors ease-in duration-200" />
               </span>
             </motion.a>
-
           </div>
         </motion.div>
       </div>
