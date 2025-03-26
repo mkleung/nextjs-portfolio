@@ -19,7 +19,7 @@ export const RevealText = ({
           whileHover="hovered"
           className="relative block overflow-hidden text-5xl font-black caret-none select-none"
           style={{
-            lineHeight: 1.25,
+            lineHeight: 1.3,
           }}
         >
           <div>
@@ -28,9 +28,11 @@ export const RevealText = ({
                 variants={{
                   initial: {
                     y: 0,
+                    opacity: 1
                   },
                   hovered: {
                     y: "-100%",
+                    opacity: 0
                   },
                 }}
                 transition={{

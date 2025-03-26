@@ -41,8 +41,8 @@ export const HeroSection = () => {
         >
           <Portrait />
           <div className="max-w-2xl mx-auto">
-            <h1 className="font-serif text-5xl text-center mt-8 flex flex-col md:flex-row">
-              <span className=" md:pt-1.5">Hello I&apos;m</span>
+            <h1 className=" text-5xl text-center mt-8 flex flex-col md:flex-row">
+              <span className=" md:pt-2">Hello I&apos;m</span>
               <span className="max-md:hidden">
                 <RevealText
                   name="Michael&nbsp;Leung"

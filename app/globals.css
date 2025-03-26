@@ -113,3 +113,17 @@
     rotate: 360deg;
   }
 }
+
+
+ /* BLOG */
+
+ .article h1, .article h2, .article h3 {
+  font-weight: 700;
+  font-size: x-large;
+  padding: 10px 0;
+ }
+
+.article p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.8);
+}

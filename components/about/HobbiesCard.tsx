@@ -21,7 +21,6 @@ const hobbies = [
     title: "Photography",
     emoji: "📷",
   },
-
   {
     title: "Cycling",
     emoji: "🚵‍♂️",
@@ -43,7 +42,7 @@ const HobbiesCard = () => {
       className="card md:h-[400px] lg:h-[340px]  h-full w-full md:col-span-1"
       initial={{
         opacity: 0,
-        y: 100,
+        y: 50,
       }}
       whileInView={{
         opacity: 1,
