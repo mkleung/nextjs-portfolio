@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import kanata from "@/assets/images/kanata.png";
-import meal from "@/assets/images/meal.png";
+import kanata from "/assets/images/kanata.png";
+import meal from "/assets/images/meal.png";
 import Image from "next/image";
-import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import { Card } from "@/components/Card";
-import { CardHeader } from "@/components/CardHeader";
+import CheckCircleIcon from "@heroicons/react/16/solid";
+import { Card } from "../components/Card";
+import { CardHeader } from "../components/CardHeader";
 
 const portfolioProjects = [
   {
@@ -51,7 +51,7 @@ const portfolioProjects = [
   },
 ];
 
-export const PortfolioSection = () => {
+const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-16 lg:py-10">
       <div className="container">
@@ -101,7 +101,7 @@ export const PortfolioSection = () => {
                         key={index}
                         className="flex gap-2 text-sm md:text-sm text-white/85"
                       >
-                        <CheckCircleIcon className="w-6 h-6" />
+                       
                         <span>{result.title}</span>
                       </li>
                     ))}
@@ -140,3 +140,6 @@ export const PortfolioSection = () => {
     </section>
   );
 };
+
+
+export default PortfolioSection

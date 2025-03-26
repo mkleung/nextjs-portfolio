@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Portrait from "@/components/Portrait";
+import Portrait from "../components/Portrait";
 import { ArrowDownIcon } from "@heroicons/react/16/solid";
-import { RevealText } from "@/components/RevealText";
+import { RevealText } from "../components/RevealText";
 
 export const HeroSection = () => {
   const scrollToSection = (id: string): void => {

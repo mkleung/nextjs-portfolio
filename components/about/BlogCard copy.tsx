@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { CardHeader } from "@/components/CardHeader";
+import { CardHeader } from "../CardHeader";
 
 
 const BlogCard  = () => {

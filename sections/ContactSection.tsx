@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Homemade_Apple } from "next/font/google";
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
-import { ContactForm } from "@/components/ContactForm";
+import { ContactForm } from "../components/ContactForm";
 
 const cursive_script = Homemade_Apple({
   subsets: ["latin"],

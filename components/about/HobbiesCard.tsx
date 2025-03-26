@@ -1,5 +1,6 @@
+'use client'
 import React, { useRef } from "react";
-import { CardHeader } from "@/components/CardHeader";
+import { CardHeader } from "../CardHeader";
 import { motion } from "framer-motion";
 
 const hobbies = [

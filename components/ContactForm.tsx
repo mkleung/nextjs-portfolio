@@ -6,7 +6,7 @@ import {
   useAnimate,
   motion,
 } from "framer-motion";
-import StarIcon from "@/assets/icons/star.svg";
+import { StarIcon } from "@heroicons/react/16/solid";
 import { useFormData } from "herotofu-react";
 
 interface ContactFormProps {

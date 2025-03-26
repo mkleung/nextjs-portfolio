@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const FooterLink = ({ title, url }: { title: string; url: string }) => {
   const [hovered, setHovered] = useState(false);

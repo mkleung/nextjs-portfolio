@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import FooterLink from "@/components/FooterLink";
+import FooterLink from "../components/FooterLink";
 
 const footerLinks = [
   {
